@@ -1,5 +1,5 @@
 [package]
-name = "nvapi"
+name = "nvapi_sys"
 version = "0.1.0"
 edition = "2021"
 description = "Updated NVAPI bindings"
@@ -10,8 +10,6 @@ license = "None"
 license_file = "None"
 
 [lib]
-name = "nvapi"
-path = "src/lib.rs"
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
