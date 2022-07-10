@@ -4,7 +4,7 @@ extern crate bindgen;
 
 fn main() {
     println!("cargo:rustc-link-search=./include/bin");
-    println!("cargo:rustc-link-lib=nvapi64");
+    println!("cargo:rustc-link-lib=static=nvapi64");
     println!("cargo:rerun-if-changed=wrapper.h");
 
     let bindings = bindgen::Builder::default()
