@@ -2,6 +2,12 @@
 name = "nvapi"
 version = "0.1.0"
 edition = "2021"
+description = "Updated NVAPI bindings"
+documentation = "None"
+homepage = "None"
+repository = "None"
+license = "None"
+license_file = "None"
 
 [lib]
 name = "nvapi"
