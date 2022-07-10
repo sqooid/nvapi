@@ -6,8 +6,8 @@ description = "Updated NVAPI bindings"
 documentation = "https://github.com/sqooid/nvapi"
 homepage = "https://github.com/sqooid/nvapi"
 repository = "https://github.com/sqooid/nvapi"
-license = "None"
-license_file = "None"
+license = "MIT"
+license_file = "license"
 
 [lib]
 
