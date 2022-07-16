@@ -1,6 +1,6 @@
 [package]
 name = "nvapi_sys_new"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 description = "Updated NVAPI bindings"
 documentation = "https://github.com/sqooid/nvapi"
