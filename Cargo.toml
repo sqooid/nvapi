@@ -7,7 +7,6 @@ documentation = "https://github.com/sqooid/nvapi"
 homepage = "https://github.com/sqooid/nvapi"
 repository = "https://github.com/sqooid/nvapi"
 license = "MIT"
-license_file = "license"
 
 [lib]
 
