@@ -13,6 +13,7 @@ fn main() {
         println!("cargo:rustc-link-lib=static=nvapi");
     }
     let bindings = bindgen::Builder::default()
+        .derive_default(true)
         .header("wrapper.h")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate()

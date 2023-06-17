@@ -394,6 +394,15 @@ fn bindgen_test_layout___crt_locale_data_public() {
         )
     );
 }
+impl Default for __crt_locale_data_public {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __crt_locale_pointers {
@@ -436,9 +445,18 @@ fn bindgen_test_layout___crt_locale_pointers() {
         )
     );
 }
+impl Default for __crt_locale_pointers {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type _locale_t = *mut __crt_locale_pointers;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _Mbstatet {
     pub _Wchar: ::std::os::raw::c_ulong,
     pub _Byte: ::std::os::raw::c_ushort,
@@ -520,7 +538,7 @@ pub type NvF32 = f32;
 pub type NvF64 = f64;
 pub type NvBool = NvU8;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_RECT {
     pub left: NvU32,
     pub top: NvU32,
@@ -584,7 +602,7 @@ fn bindgen_test_layout__NV_RECT() {
 }
 pub type NV_RECT = _NV_RECT;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvLogicalGpuHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -615,7 +633,7 @@ fn bindgen_test_layout_NvLogicalGpuHandle__() {
 }
 pub type NvLogicalGpuHandle = *mut NvLogicalGpuHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvPhysicalGpuHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -647,7 +665,7 @@ fn bindgen_test_layout_NvPhysicalGpuHandle__() {
 }
 pub type NvPhysicalGpuHandle = *mut NvPhysicalGpuHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvDisplayHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -678,7 +696,7 @@ fn bindgen_test_layout_NvDisplayHandle__() {
 }
 pub type NvDisplayHandle = *mut NvDisplayHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvMonitorHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -709,7 +727,7 @@ fn bindgen_test_layout_NvMonitorHandle__() {
 }
 pub type NvMonitorHandle = *mut NvMonitorHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvUnAttachedDisplayHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -741,7 +759,7 @@ fn bindgen_test_layout_NvUnAttachedDisplayHandle__() {
 }
 pub type NvUnAttachedDisplayHandle = *mut NvUnAttachedDisplayHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvVisualComputingDeviceHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -773,7 +791,7 @@ fn bindgen_test_layout_NvVisualComputingDeviceHandle__() {
 }
 pub type NvVisualComputingDeviceHandle = *mut NvVisualComputingDeviceHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvEventHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -804,7 +822,7 @@ fn bindgen_test_layout_NvEventHandle__() {
 }
 pub type NvEventHandle = *mut NvEventHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvHICHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -835,7 +853,7 @@ fn bindgen_test_layout_NvHICHandle__() {
 }
 pub type NvHICHandle = *mut NvHICHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvGSyncDeviceHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -867,7 +885,7 @@ fn bindgen_test_layout_NvGSyncDeviceHandle__() {
 }
 pub type NvGSyncDeviceHandle = *mut NvGSyncDeviceHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvVioHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -898,7 +916,7 @@ fn bindgen_test_layout_NvVioHandle__() {
 }
 pub type NvVioHandle = *mut NvVioHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvTransitionHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -929,7 +947,7 @@ fn bindgen_test_layout_NvTransitionHandle__() {
 }
 pub type NvTransitionHandle = *mut NvTransitionHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvAudioHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -960,7 +978,7 @@ fn bindgen_test_layout_NvAudioHandle__() {
 }
 pub type NvAudioHandle = *mut NvAudioHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct Nv3DVPContextHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -992,7 +1010,7 @@ fn bindgen_test_layout_Nv3DVPContextHandle__() {
 }
 pub type Nv3DVPContextHandle = *mut Nv3DVPContextHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct Nv3DVPTransceiverHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -1024,7 +1042,7 @@ fn bindgen_test_layout_Nv3DVPTransceiverHandle__() {
 }
 pub type Nv3DVPTransceiverHandle = *mut Nv3DVPTransceiverHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct Nv3DVPGlassesHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -1056,7 +1074,7 @@ fn bindgen_test_layout_Nv3DVPGlassesHandle__() {
 }
 pub type Nv3DVPGlassesHandle = *mut Nv3DVPGlassesHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvPcfClientHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -1088,7 +1106,7 @@ fn bindgen_test_layout_NvPcfClientHandle__() {
 pub type NvPcfClientHandle = *mut NvPcfClientHandle__;
 pub type StereoHandle = *mut ::std::os::raw::c_void;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvSourceHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -1119,7 +1137,7 @@ fn bindgen_test_layout_NvSourceHandle__() {
 }
 pub type NvSourceHandle = *mut NvSourceHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvTargetHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -1150,7 +1168,7 @@ fn bindgen_test_layout_NvTargetHandle__() {
 }
 pub type NvTargetHandle = *mut NvTargetHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NVDX_SwapChainHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -1185,7 +1203,7 @@ extern "C" {
     pub static NVDX_SWAPCHAIN_NONE: NVDX_SwapChainHandle;
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvPresentBarrierClientHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -1217,7 +1235,7 @@ fn bindgen_test_layout_NvPresentBarrierClientHandle__() {
 }
 pub type NvPresentBarrierClientHandle = *mut NvPresentBarrierClientHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvSBox {
     pub sX: NvS32,
     pub sY: NvS32,
@@ -1280,7 +1298,7 @@ fn bindgen_test_layout_NvSBox() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvGUID {
     pub data1: NvU32,
     pub data2: NvU16,
@@ -1678,7 +1696,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup driverapi\n! Used in NvAPI_GPU_GetMemoryInfo()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_DISPLAY_DRIVER_MEMORY_INFO_V1 {
     #[doc = "!< Version info"]
     pub version: NvU32,
@@ -1764,7 +1782,7 @@ fn bindgen_test_layout_NV_DISPLAY_DRIVER_MEMORY_INFO_V1() {
 }
 #[doc = "! \\ingroup driverapi\n! Used in NvAPI_GPU_GetMemoryInfo()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_DISPLAY_DRIVER_MEMORY_INFO_V2 {
     #[doc = "!< Version info"]
     pub version: NvU32,
@@ -1864,7 +1882,7 @@ fn bindgen_test_layout_NV_DISPLAY_DRIVER_MEMORY_INFO_V2() {
 }
 #[doc = "! \\ingroup driverapi\n! Used in NvAPI_GPU_GetMemoryInfo()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_DISPLAY_DRIVER_MEMORY_INFO_V3 {
     #[doc = "!< Version info"]
     pub version: NvU32,
@@ -2001,7 +2019,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup driverapi\n! Used in NvAPI_GPU_GetMemoryInfoEx()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_MEMORY_INFO_EX_V1 {
     #[doc = "!< Structure version"]
     pub version: NvU32,
@@ -2170,7 +2188,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup dx\n! Used in NvAPI_D3D10_GetCurrentSLIState(), and NvAPI_D3D_GetCurrentSLIState()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GET_CURRENT_SLI_STATE_V1 {
     #[doc = "!< Structure version"]
     pub version: NvU32,
@@ -2274,7 +2292,7 @@ fn bindgen_test_layout_NV_GET_CURRENT_SLI_STATE_V1() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GET_CURRENT_SLI_STATE_V2 {
     #[doc = "!< Structure version"]
     pub version: NvU32,
@@ -2658,6 +2676,15 @@ fn bindgen_test_layout_NV_EDID_V1() {
         )
     );
 }
+impl Default for NV_EDID_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Used in NvAPI_GPU_GetEDID()"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -2711,6 +2738,15 @@ fn bindgen_test_layout_NV_EDID_V2() {
             stringify!(sizeofEDID)
         )
     );
+}
+impl Default for NV_EDID_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! Used in NvAPI_GPU_GetEDID()"]
 #[repr(C)]
@@ -2789,6 +2825,15 @@ fn bindgen_test_layout_NV_EDID_V3() {
             stringify!(offset)
         )
     );
+}
+impl Default for NV_EDID_V3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! Used in NvAPI_GPU_GetEDID()"]
 pub type NV_EDID = NV_EDID_V3;
@@ -3011,7 +3056,7 @@ pub type _NV_FORMAT = ::std::os::raw::c_int;
 #[doc = "! Color formats- used in NvAPI_SetViewEx().\n! \\ingroup dispcontrol"]
 pub use self::_NV_FORMAT as NV_FORMAT;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_VIEWPORTF {
     #[doc = "!<  x-coordinate of the viewport top-left point"]
     pub x: f32,
@@ -3214,6 +3259,15 @@ fn bindgen_test_layout_tagNV_TIMINGEXT() {
         )
     );
 }
+impl Default for tagNV_TIMINGEXT {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup dispcontrol\n!  NVIDIA-specific timing extras \\n\n! Used in NV_TIMING."]
 pub type NV_TIMINGEXT = tagNV_TIMINGEXT;
 #[doc = "! \\ingroup dispcontrol\n!The very basic timing structure based on the VESA standard:\n! \\code\n!            |<----------------------------htotal--------------------------->|\n!             ---------\"active\" video-------->|<-------blanking------>|<-----\n!            |<-------hvisible-------->|<-hb->|<-hfp->|<-hsw->|<-hbp->|<-hb->|\n! --------- -+-------------------------+      |       |       |       |      |\n!   A      A |                         |      |       |       |       |      |\n!   :      : |                         |      |       |       |       |      |\n!   :      : |                         |      |       |       |       |      |\n!   :vertical|    addressable video    |      |       |       |       |      |\n!   : visible|                         |      |       |       |       |      |\n!   :      : |                         |      |       |       |       |      |\n!   :      : |                         |      |       |       |       |      |\n! vertical V |                         |      |       |       |       |      |\n!  total   --+-------------------------+      |       |       |       |      |\n!   :      vb         border                  |       |       |       |      |\n!   :      -----------------------------------+       |       |       |      |\n!   :      vfp        front porch                     |       |       |      |\n!   :      -------------------------------------------+       |       |      |\n!   :      vsw        sync width                              |       |      |\n!   :      ---------------------------------------------------+       |      |\n!   :      vbp        back porch                                      |      |\n!   :      -----------------------------------------------------------+      |\n!   V      vb         border                                                 |\n! ---------------------------------------------------------------------------+\n! \\endcode"]
@@ -3415,11 +3469,20 @@ fn bindgen_test_layout__NV_TIMING() {
         )
     );
 }
+impl Default for _NV_TIMING {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup dispcontrol\n!The very basic timing structure based on the VESA standard:\n! \\code\n!            |<----------------------------htotal--------------------------->|\n!             ---------\"active\" video-------->|<-------blanking------>|<-----\n!            |<-------hvisible-------->|<-hb->|<-hfp->|<-hsw->|<-hbp->|<-hb->|\n! --------- -+-------------------------+      |       |       |       |      |\n!   A      A |                         |      |       |       |       |      |\n!   :      : |                         |      |       |       |       |      |\n!   :      : |                         |      |       |       |       |      |\n!   :vertical|    addressable video    |      |       |       |       |      |\n!   : visible|                         |      |       |       |       |      |\n!   :      : |                         |      |       |       |       |      |\n!   :      : |                         |      |       |       |       |      |\n! vertical V |                         |      |       |       |       |      |\n!  total   --+-------------------------+      |       |       |       |      |\n!   :      vb         border                  |       |       |       |      |\n!   :      -----------------------------------+       |       |       |      |\n!   :      vfp        front porch                     |       |       |      |\n!   :      -------------------------------------------+       |       |      |\n!   :      vsw        sync width                              |       |      |\n!   :      ---------------------------------------------------+       |      |\n!   :      vbp        back porch                                      |      |\n!   :      -----------------------------------------------------------+      |\n!   V      vb         border                                                 |\n! ---------------------------------------------------------------------------+\n! \\endcode"]
 pub type NV_TIMING = _NV_TIMING;
 #[doc = "! \\ingroup dispcontrol\n! Used in NvAPI_SetView() and NvAPI_GetView()"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_VIEW_TARGET_INFO {
     #[doc = "!< (IN) structure version"]
     pub version: NvU32,
@@ -3428,7 +3491,7 @@ pub struct NV_VIEW_TARGET_INFO {
     pub target: [NV_VIEW_TARGET_INFO__bindgen_ty_1; 2usize],
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_VIEW_TARGET_INFO__bindgen_ty_1 {
     #[doc = "!< (IN/OUT) Device mask"]
     pub deviceMask: NvU32,
@@ -3784,6 +3847,15 @@ fn bindgen_test_layout_NV_DISPLAY_PATH() {
         )
     );
 }
+impl Default for NV_DISPLAY_PATH {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl NV_DISPLAY_PATH {
     #[inline]
     pub fn bPrimary(&self) -> NvU32 {
@@ -3952,6 +4024,15 @@ fn bindgen_test_layout_NV_DISPLAY_PATH_INFO_V3() {
         )
     );
 }
+impl Default for NV_DISPLAY_PATH_INFO_V3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup dispcontrol\n! Used in NvAPI_SetViewEx() and NvAPI_GetViewEx()."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -4007,6 +4088,15 @@ fn bindgen_test_layout_NV_DISPLAY_PATH_INFO() {
         )
     );
 }
+impl Default for NV_DISPLAY_PATH_INFO {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 extern "C" {
     #[doc = "! \\ingroup dispcontrol"]
     pub fn NvAPI_SetViewEx(
@@ -4017,7 +4107,7 @@ extern "C" {
 }
 #[doc = "\n! \\ingroup dispcontrol"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_POSITION {
     pub x: NvS32,
     pub y: NvS32,
@@ -4061,7 +4151,7 @@ fn bindgen_test_layout__NV_POSITION() {
 pub type NV_POSITION = _NV_POSITION;
 #[doc = "! \\ingroup dispcontrol"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_RESOLUTION {
     pub width: NvU32,
     pub height: NvU32,
@@ -4238,6 +4328,15 @@ fn bindgen_test_layout__NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1() {
         )
     );
 }
+impl Default for _NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_DISPLAYCONFIG_PATH_ADVANCED_TARGET_INFO_V1 {
     #[inline]
     pub fn interlaced(&self) -> NvU32 {
@@ -4400,6 +4499,15 @@ fn bindgen_test_layout__NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1() {
         )
     );
 }
+impl Default for _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup dispcontrol"]
 pub type NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1 = _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V1;
 #[doc = "! \\ingroup dispcontrol"]
@@ -4464,6 +4572,15 @@ fn bindgen_test_layout__NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2() {
             stringify!(targetId)
         )
     );
+}
+impl Default for _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! \\ingroup dispcontrol"]
 pub type NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2 = _NV_DISPLAYCONFIG_PATH_TARGET_INFO_V2;
@@ -4554,6 +4671,15 @@ fn bindgen_test_layout__NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1() {
             stringify!(spanningOrientation)
         )
     );
+}
+impl Default for _NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_DISPLAYCONFIG_SOURCE_MODE_INFO_V1 {
     #[inline]
@@ -4692,6 +4818,15 @@ fn bindgen_test_layout__NV_DISPLAYCONFIG_PATH_INFO_V1() {
         )
     );
 }
+impl Default for _NV_DISPLAYCONFIG_PATH_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup dispcontrol"]
 pub type NV_DISPLAYCONFIG_PATH_INFO_V1 = _NV_DISPLAYCONFIG_PATH_INFO_V1;
 #[repr(C)]
@@ -4759,6 +4894,15 @@ fn bindgen_test_layout__NV_DISPLAYCONFIG_PATH_INFO__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NV_DISPLAYCONFIG_PATH_INFO__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_DISPLAYCONFIG_PATH_INFO() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_DISPLAYCONFIG_PATH_INFO> =
@@ -4824,6 +4968,15 @@ fn bindgen_test_layout__NV_DISPLAYCONFIG_PATH_INFO() {
             stringify!(pOSAdapterID)
         )
     );
+}
+impl Default for _NV_DISPLAYCONFIG_PATH_INFO {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_DISPLAYCONFIG_PATH_INFO {
     #[inline]
@@ -4935,14 +5088,14 @@ pub const NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID_NVAPI_GPU_PERF_PSTATE20_CLOCK_TYPE_
 pub type NV_GPU_PERF_PSTATE20_CLOCK_TYPE_ID = ::std::os::raw::c_int;
 #[doc = "! Used to describe both voltage and frequency deltas"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_PERF_PSTATES20_PARAM_DELTA {
     #[doc = "! Value of parameter delta (in respective units [kHz, uV])"]
     pub value: NvS32,
     pub valueRange: NV_GPU_PERF_PSTATES20_PARAM_DELTA__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_PERF_PSTATES20_PARAM_DELTA__bindgen_ty_1 {
     #[doc = "! Min value allowed for parameter delta (in respective units [kHz, uV])"]
     pub min: NvS32,
@@ -5052,7 +5205,7 @@ pub union NV_GPU_PSTATE20_CLOCK_ENTRY_V1__bindgen_ty_1 {
     pub range: NV_GPU_PSTATE20_CLOCK_ENTRY_V1__bindgen_ty_1__bindgen_ty_2,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_PSTATE20_CLOCK_ENTRY_V1__bindgen_ty_1__bindgen_ty_1 {
     #[doc = "! Clock frequency within given pstate in (kHz)"]
     pub freq_kHz: NvU32,
@@ -5175,6 +5328,15 @@ fn bindgen_test_layout_NV_GPU_PSTATE20_CLOCK_ENTRY_V1__bindgen_ty_1__bindgen_ty_
         )
     );
 }
+impl Default for NV_GPU_PSTATE20_CLOCK_ENTRY_V1__bindgen_ty_1__bindgen_ty_2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_GPU_PSTATE20_CLOCK_ENTRY_V1__bindgen_ty_1() {
     const UNINIT: ::std::mem::MaybeUninit<NV_GPU_PSTATE20_CLOCK_ENTRY_V1__bindgen_ty_1> =
@@ -5216,6 +5378,15 @@ fn bindgen_test_layout_NV_GPU_PSTATE20_CLOCK_ENTRY_V1__bindgen_ty_1() {
             stringify!(range)
         )
     );
+}
+impl Default for NV_GPU_PSTATE20_CLOCK_ENTRY_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[test]
 fn bindgen_test_layout_NV_GPU_PSTATE20_CLOCK_ENTRY_V1() {
@@ -5272,6 +5443,15 @@ fn bindgen_test_layout_NV_GPU_PSTATE20_CLOCK_ENTRY_V1() {
             stringify!(data)
         )
     );
+}
+impl Default for NV_GPU_PSTATE20_CLOCK_ENTRY_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl NV_GPU_PSTATE20_CLOCK_ENTRY_V1 {
     #[inline]
@@ -5376,6 +5556,15 @@ fn bindgen_test_layout_NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1() {
             stringify!(voltDelta_uV)
         )
     );
+}
+impl Default for NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl NV_GPU_PSTATE20_BASE_VOLTAGE_ENTRY_V1 {
     #[inline]
@@ -5498,6 +5687,15 @@ fn bindgen_test_layout_NV_GPU_PERF_PSTATES20_INFO_V1__bindgen_ty_1() {
         )
     );
 }
+impl Default for NV_GPU_PERF_PSTATES20_INFO_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl NV_GPU_PERF_PSTATES20_INFO_V1__bindgen_ty_1 {
     #[inline]
     pub fn bIsEditable(&self) -> NvU32 {
@@ -5603,6 +5801,15 @@ fn bindgen_test_layout_NV_GPU_PERF_PSTATES20_INFO_V1() {
             stringify!(pstates)
         )
     );
+}
+impl Default for NV_GPU_PERF_PSTATES20_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl NV_GPU_PERF_PSTATES20_INFO_V1 {
     #[inline]
@@ -5726,6 +5933,15 @@ fn bindgen_test_layout__NV_GPU_PERF_PSTATES20_INFO_V2__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NV_GPU_PERF_PSTATES20_INFO_V2__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_GPU_PERF_PSTATES20_INFO_V2__bindgen_ty_1 {
     #[inline]
     pub fn bIsEditable(&self) -> NvU32 {
@@ -5817,6 +6033,15 @@ fn bindgen_test_layout__NV_GPU_PERF_PSTATES20_INFO_V2__bindgen_ty_2() {
         )
     );
 }
+impl Default for _NV_GPU_PERF_PSTATES20_INFO_V2__bindgen_ty_2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_GPU_PERF_PSTATES20_INFO_V2() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_GPU_PERF_PSTATES20_INFO_V2> =
@@ -5892,6 +6117,15 @@ fn bindgen_test_layout__NV_GPU_PERF_PSTATES20_INFO_V2() {
             stringify!(ov)
         )
     );
+}
+impl Default for _NV_GPU_PERF_PSTATES20_INFO_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_GPU_PERF_PSTATES20_INFO_V2 {
     #[inline]
@@ -6012,6 +6246,15 @@ fn bindgen_test_layout_NV_DISPLAY_DRIVER_VERSION() {
             stringify!(szAdapterString)
         )
     );
+}
+impl Default for NV_DISPLAY_DRIVER_VERSION {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 extern "C" {
     #[doc = "! \\ingroup driverapi"]
@@ -6232,6 +6475,15 @@ fn bindgen_test_layout__NV_GPU_DISPLAYIDS() {
             stringify!(displayId)
         )
     );
+}
+impl Default for _NV_GPU_DISPLAYIDS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_GPU_DISPLAYIDS {
     #[inline]
@@ -6622,7 +6874,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup gpu"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_BOARD_INFO {
     #[doc = "!< structure version"]
     pub version: NvU32,
@@ -6684,7 +6936,7 @@ extern "C" {
 }
 #[doc = "! Used in NvAPI_GPU_GetArchInfo()"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_ARCH_INFO_V1 {
     pub version: NvU32,
     pub architecture: NvU32,
@@ -6999,6 +7251,15 @@ fn bindgen_test_layout_NV_GPU_ARCH_INFO_V2__bindgen_ty_1() {
         )
     );
 }
+impl Default for NV_GPU_ARCH_INFO_V2__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union NV_GPU_ARCH_INFO_V2__bindgen_ty_2 {
@@ -7045,6 +7306,15 @@ fn bindgen_test_layout_NV_GPU_ARCH_INFO_V2__bindgen_ty_2() {
             stringify!(implementation_id)
         )
     );
+}
+impl Default for NV_GPU_ARCH_INFO_V2__bindgen_ty_2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -7093,6 +7363,15 @@ fn bindgen_test_layout_NV_GPU_ARCH_INFO_V2__bindgen_ty_3() {
         )
     );
 }
+impl Default for NV_GPU_ARCH_INFO_V2__bindgen_ty_3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_GPU_ARCH_INFO_V2() {
     const UNINIT: ::std::mem::MaybeUninit<NV_GPU_ARCH_INFO_V2> = ::std::mem::MaybeUninit::uninit();
@@ -7117,6 +7396,15 @@ fn bindgen_test_layout_NV_GPU_ARCH_INFO_V2() {
             stringify!(version)
         )
     );
+}
+impl Default for NV_GPU_ARCH_INFO_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! \\ingroup gpu"]
 pub type NV_GPU_ARCH_INFO = NV_GPU_ARCH_INFO_V2;
@@ -7264,6 +7552,15 @@ fn bindgen_test_layout_NV_I2C_INFO_V1() {
         )
     );
 }
+impl Default for NV_I2C_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Used in NvAPI_I2CRead() and NvAPI_I2CWrite()"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -7403,6 +7700,15 @@ fn bindgen_test_layout_NV_I2C_INFO_V2() {
             stringify!(i2cSpeedKhz)
         )
     );
+}
+impl Default for NV_I2C_INFO_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! Used in NvAPI_I2CRead() and NvAPI_I2CWrite()"]
 #[repr(C)]
@@ -7568,6 +7874,15 @@ fn bindgen_test_layout_NV_I2C_INFO_V3() {
         )
     );
 }
+impl Default for NV_I2C_INFO_V3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Used in NvAPI_I2CRead() and NvAPI_I2CWrite()"]
 pub type NV_I2C_INFO = NV_I2C_INFO_V3;
 extern "C" {
@@ -7709,6 +8024,15 @@ fn bindgen_test_layout_NV_GPU_GET_HDCP_SUPPORT_STATUS() {
         )
     );
 }
+impl Default for NV_GPU_GET_HDCP_SUPPORT_STATUS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 extern "C" {
     #[doc = "!  \\ingroup gpu"]
     pub fn NvAPI_GPU_GetHDCPSupportStatus(
@@ -7777,6 +8101,15 @@ fn bindgen_test_layout_NV_COMPUTE_GPU_TOPOLOGY_V1__bindgen_ty_1() {
         )
     );
 }
+impl Default for NV_COMPUTE_GPU_TOPOLOGY_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_COMPUTE_GPU_TOPOLOGY_V1() {
     const UNINIT: ::std::mem::MaybeUninit<NV_COMPUTE_GPU_TOPOLOGY_V1> =
@@ -7823,6 +8156,15 @@ fn bindgen_test_layout_NV_COMPUTE_GPU_TOPOLOGY_V1() {
         )
     );
 }
+impl Default for NV_COMPUTE_GPU_TOPOLOGY_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _NV_COMPUTE_GPU {
@@ -7865,6 +8207,15 @@ fn bindgen_test_layout__NV_COMPUTE_GPU() {
             stringify!(flags)
         )
     );
+}
+impl Default for _NV_COMPUTE_GPU {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NV_COMPUTE_GPU = _NV_COMPUTE_GPU;
 #[repr(C)]
@@ -7922,6 +8273,15 @@ fn bindgen_test_layout__NV_COMPUTE_GPU_TOPOLOGY_V2() {
             stringify!(computeGpus)
         )
     );
+}
+impl Default for _NV_COMPUTE_GPU_TOPOLOGY_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NV_COMPUTE_GPU_TOPOLOGY_V2 = _NV_COMPUTE_GPU_TOPOLOGY_V2;
 pub type NV_COMPUTE_GPU_TOPOLOGY = NV_COMPUTE_GPU_TOPOLOGY_V2;
@@ -7997,6 +8357,15 @@ fn bindgen_test_layout_NV_GPU_ECC_STATUS_INFO() {
         )
     );
 }
+impl Default for NV_GPU_ECC_STATUS_INFO {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl NV_GPU_ECC_STATUS_INFO {
     #[inline]
     pub fn isSupported(&self) -> NvU32 {
@@ -8048,7 +8417,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup gpuecc\n! Used in NvAPI_GPU_GetECCErrorInfo()/"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_ECC_ERROR_INFO {
     #[doc = "!< Structure version"]
     pub version: NvU32,
@@ -8056,7 +8425,7 @@ pub struct NV_GPU_ECC_ERROR_INFO {
     pub aggregate: NV_GPU_ECC_ERROR_INFO__bindgen_ty_2,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_ECC_ERROR_INFO__bindgen_ty_1 {
     #[doc = "!< Number of single-bit ECC errors detected since last boot"]
     pub singleBitErrors: NvU64,
@@ -8103,7 +8472,7 @@ fn bindgen_test_layout_NV_GPU_ECC_ERROR_INFO__bindgen_ty_1() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_ECC_ERROR_INFO__bindgen_ty_2 {
     #[doc = "!< Number of single-bit ECC errors detected since last counter reset"]
     pub singleBitErrors: NvU64,
@@ -8212,7 +8581,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup gpuecc\n! Used in NvAPI_GPU_GetECCConfigurationInfo()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_ECC_CONFIGURATION_INFO {
     pub version: NvU32,
     pub _bitfield_align_1: [u8; 0],
@@ -8349,6 +8718,15 @@ fn bindgen_test_layout_NV_QSYNC_EVENT_DATA() {
         )
     );
 }
+impl Default for NV_QSYNC_EVENT_DATA {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Callback for QSYNC event"]
 pub type NVAPI_CALLBACK_QSYNCEVENT = ::std::option::Option<
     unsafe extern "C" fn(
@@ -8410,6 +8788,15 @@ fn bindgen_test_layout_NV_EVENT_REGISTER_CALLBACK__bindgen_ty_1() {
         )
     );
 }
+impl Default for NV_EVENT_REGISTER_CALLBACK__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_EVENT_REGISTER_CALLBACK() {
     const UNINIT: ::std::mem::MaybeUninit<NV_EVENT_REGISTER_CALLBACK> =
@@ -8465,6 +8852,15 @@ fn bindgen_test_layout_NV_EVENT_REGISTER_CALLBACK() {
             stringify!(nvCallBackFunc)
         )
     );
+}
+impl Default for NV_EVENT_REGISTER_CALLBACK {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! Core NV_EVENT_REGISTER_CALLBACK structure declaration"]
 pub type PNV_EVENT_REGISTER_CALLBACK = *mut NV_EVENT_REGISTER_CALLBACK;
@@ -8555,6 +8951,15 @@ fn bindgen_test_layout_NV_SCANOUT_INTENSITY_DATA_V1() {
             stringify!(blendingTexture)
         )
     );
+}
+impl Default for NV_SCANOUT_INTENSITY_DATA_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! \\ingroup gpu"]
 #[repr(C)]
@@ -8649,6 +9054,15 @@ fn bindgen_test_layout_NV_SCANOUT_INTENSITY_DATA_V2() {
         )
     );
 }
+impl Default for NV_SCANOUT_INTENSITY_DATA_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup gpu"]
 pub type NV_SCANOUT_INTENSITY_DATA = NV_SCANOUT_INTENSITY_DATA_V2;
 extern "C" {
@@ -8661,7 +9075,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup gpu"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_SCANOUT_INTENSITY_STATE_DATA {
     #[doc = "!< version of this structure"]
     pub version: NvU32,
@@ -8803,6 +9217,15 @@ fn bindgen_test_layout_NV_SCANOUT_WARPING_DATA() {
         )
     );
 }
+impl Default for NV_SCANOUT_WARPING_DATA {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 extern "C" {
     #[doc = "!   DESCRIPTION: This API enables and sets up the warping feature on the specified display.\n!\n! SUPPORTED OS:  Windows 7 and higher\n!\n!\n! \\param [in]    displayId               Combined physical display and GPU identifier of the display to apply the intensity control\n! \\param [in]    scanoutWarpingData      The warping data info\n! \\param [out]   pbSticky                Indicates whether the settings will be kept over a reboot.\n!\n! \\retval ::NVAPI_INVALID_ARGUMENT Invalid input parameters.\n! \\retval ::NVAPI_API_NOT_INITIALIZED NvAPI not initialized.\n! \\retval ::NVAPI_NOT_SUPPORTED Interface not supported by the driver used, or only supported on selected GPUs\n! \\retval ::NVAPI_INVALID_ARGUMENT Invalid input data.\n! \\retval ::NVAPI_INCOMPATIBLE_STRUCT_VERSION NV_SCANOUT_WARPING_DATA structure version mismatch.\n! \\retval ::NVAPI_OK Feature enabled.\n! \\retval ::NVAPI_ERROR Miscellaneous error occurred.\n!\n! \\ingroup gpu\n"]
     pub fn NvAPI_GPU_SetScanoutWarping(
@@ -8814,7 +9237,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup gpu"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_SCANOUT_WARPING_STATE_DATA {
     #[doc = "!< version of this structure"]
     pub version: NvU32,
@@ -9021,6 +9444,15 @@ fn bindgen_test_layout__NV_SCANOUT_INFORMATION() {
         )
     );
 }
+impl Default for _NV_SCANOUT_INFORMATION {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup gpu\n! Used in NvAPI_GPU_GetScanoutConfigurationEx()."]
 pub type NV_SCANOUT_INFORMATION = _NV_SCANOUT_INFORMATION;
 extern "C" {
@@ -9105,6 +9537,15 @@ fn bindgen_test_layout__NV_GPU_VIRTUALIZATION_INFO() {
             stringify!(reserved)
         )
     );
+}
+impl Default for _NV_GPU_VIRTUALIZATION_INFO {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! \\ingroup gpu"]
 pub type NV_GPU_VIRTUALIZATION_INFO_V1 = _NV_GPU_VIRTUALIZATION_INFO;
@@ -9198,6 +9639,15 @@ fn bindgen_test_layout__NV_LOGICAL_GPU_DATA_V1() {
         )
     );
 }
+impl Default for _NV_LOGICAL_GPU_DATA_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup gpu"]
 pub type NV_LOGICAL_GPU_DATA_V1 = _NV_LOGICAL_GPU_DATA_V1;
 #[doc = "! \\ingroup gpu"]
@@ -9223,7 +9673,7 @@ pub type _NV_LICENSE_FEATURE_TYPE = ::std::os::raw::c_int;
 #[doc = "! Used in NV_LICENSE_FEATURE_DETAILS"]
 pub use self::_NV_LICENSE_FEATURE_TYPE as NV_LICENSE_FEATURE_TYPE;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_LICENSE_EXPIRY_DETAILS {
     #[doc = "!< Year value of license expiry"]
     pub year: NvU32,
@@ -9386,6 +9836,15 @@ fn bindgen_test_layout__NV_LICENSE_FEATURE_DETAILS_V1() {
         )
     );
 }
+impl Default for _NV_LICENSE_FEATURE_DETAILS_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_LICENSE_FEATURE_DETAILS_V1 {
     #[inline]
     pub fn isEnabled(&self) -> NvU32 {
@@ -9498,6 +9957,15 @@ fn bindgen_test_layout__NV_LICENSE_FEATURE_DETAILS_V2() {
         )
     );
 }
+impl Default for _NV_LICENSE_FEATURE_DETAILS_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_LICENSE_FEATURE_DETAILS_V2 {
     #[inline]
     pub fn isEnabled(&self) -> NvU32 {
@@ -9608,6 +10076,15 @@ fn bindgen_test_layout__NV_LICENSE_FEATURE_DETAILS_V3() {
             stringify!(productName)
         )
     );
+}
+impl Default for _NV_LICENSE_FEATURE_DETAILS_V3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_LICENSE_FEATURE_DETAILS_V3 {
     #[inline]
@@ -9748,6 +10225,15 @@ fn bindgen_test_layout__NV_LICENSE_FEATURE_DETAILS_V4() {
         )
     );
 }
+impl Default for _NV_LICENSE_FEATURE_DETAILS_V4 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_LICENSE_FEATURE_DETAILS_V4 {
     #[inline]
     pub fn isEnabled(&self) -> NvU32 {
@@ -9878,6 +10364,15 @@ fn bindgen_test_layout__NV_LICENSABLE_FEATURES_V1() {
         )
     );
 }
+impl Default for _NV_LICENSABLE_FEATURES_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_LICENSABLE_FEATURES_V1 {
     #[inline]
     pub fn isLicenseSupported(&self) -> NvU32 {
@@ -9990,6 +10485,15 @@ fn bindgen_test_layout__NV_LICENSABLE_FEATURES_V2() {
         )
     );
 }
+impl Default for _NV_LICENSABLE_FEATURES_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_LICENSABLE_FEATURES_V2 {
     #[inline]
     pub fn isLicenseSupported(&self) -> NvU32 {
@@ -10100,6 +10604,15 @@ fn bindgen_test_layout__NV_LICENSABLE_FEATURES_V3() {
             stringify!(licenseDetails)
         )
     );
+}
+impl Default for _NV_LICENSABLE_FEATURES_V3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_LICENSABLE_FEATURES_V3 {
     #[inline]
@@ -10212,6 +10725,15 @@ fn bindgen_test_layout__NV_LICENSABLE_FEATURES_V4() {
         )
     );
 }
+impl Default for _NV_LICENSABLE_FEATURES_V4 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_LICENSABLE_FEATURES_V4 {
     #[inline]
     pub fn isLicenseSupported(&self) -> NvU32 {
@@ -10262,7 +10784,7 @@ extern "C" {
     ) -> NvAPI_Status;
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_VR_READY_V1 {
     #[doc = "!< Structure Version."]
     pub version: NvU32,
@@ -10458,6 +10980,15 @@ fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V1__bindgen_ty_1__bindgen_ty_1()
         )
     );
 }
+impl Default for NV_GPU_PERF_PSTATES_INFO_V1__bindgen_ty_1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V1__bindgen_ty_1() {
     const UNINIT: ::std::mem::MaybeUninit<NV_GPU_PERF_PSTATES_INFO_V1__bindgen_ty_1> =
@@ -10509,6 +11040,15 @@ fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V1__bindgen_ty_1() {
             stringify!(clocks)
         )
     );
+}
+impl Default for NV_GPU_PERF_PSTATES_INFO_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[test]
 fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V1() {
@@ -10575,6 +11115,15 @@ fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V1() {
             stringify!(pstates)
         )
     );
+}
+impl Default for NV_GPU_PERF_PSTATES_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! \\ingroup gpupstate"]
 #[repr(C)]
@@ -10661,6 +11210,15 @@ fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V2__bindgen_ty_1__bindgen_ty_1()
         )
     );
 }
+impl Default for NV_GPU_PERF_PSTATES_INFO_V2__bindgen_ty_1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct NV_GPU_PERF_PSTATES_INFO_V2__bindgen_ty_1__bindgen_ty_2 {
@@ -10723,6 +11281,15 @@ fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V2__bindgen_ty_1__bindgen_ty_2()
         )
     );
 }
+impl Default for NV_GPU_PERF_PSTATES_INFO_V2__bindgen_ty_1__bindgen_ty_2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V2__bindgen_ty_1() {
     const UNINIT: ::std::mem::MaybeUninit<NV_GPU_PERF_PSTATES_INFO_V2__bindgen_ty_1> =
@@ -10784,6 +11351,15 @@ fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V2__bindgen_ty_1() {
             stringify!(voltages)
         )
     );
+}
+impl Default for NV_GPU_PERF_PSTATES_INFO_V2__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[test]
 fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V2() {
@@ -10861,6 +11437,15 @@ fn bindgen_test_layout_NV_GPU_PERF_PSTATES_INFO_V2() {
         )
     );
 }
+impl Default for NV_GPU_PERF_PSTATES_INFO_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup gpupstate"]
 pub type NV_GPU_PERF_PSTATES_INFO = NV_GPU_PERF_PSTATES_INFO_V2;
 extern "C" {
@@ -10887,7 +11472,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup gpupstate\n! Used in NvAPI_GPU_GetDynamicPstatesInfoEx()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_DYNAMIC_PSTATES_INFO_EX {
     #[doc = "!< Structure version"]
     pub version: NvU32,
@@ -10896,7 +11481,7 @@ pub struct NV_GPU_DYNAMIC_PSTATES_INFO_EX {
     pub utilization: [NV_GPU_DYNAMIC_PSTATES_INFO_EX__bindgen_ty_1; 8usize],
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_DYNAMIC_PSTATES_INFO_EX__bindgen_ty_1 {
     pub _bitfield_align_1: [u8; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
@@ -11140,6 +11725,15 @@ fn bindgen_test_layout_NV_GPU_THERMAL_SETTINGS_V1__bindgen_ty_1() {
         )
     );
 }
+impl Default for NV_GPU_THERMAL_SETTINGS_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_GPU_THERMAL_SETTINGS_V1() {
     const UNINIT: ::std::mem::MaybeUninit<NV_GPU_THERMAL_SETTINGS_V1> =
@@ -11185,6 +11779,15 @@ fn bindgen_test_layout_NV_GPU_THERMAL_SETTINGS_V1() {
             stringify!(sensor)
         )
     );
+}
+impl Default for NV_GPU_THERMAL_SETTINGS_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! \\ingroup gputhermal"]
 #[repr(C)]
@@ -11282,6 +11885,15 @@ fn bindgen_test_layout_NV_GPU_THERMAL_SETTINGS_V2__bindgen_ty_1() {
         )
     );
 }
+impl Default for NV_GPU_THERMAL_SETTINGS_V2__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_GPU_THERMAL_SETTINGS_V2() {
     const UNINIT: ::std::mem::MaybeUninit<NV_GPU_THERMAL_SETTINGS_V2> =
@@ -11328,6 +11940,15 @@ fn bindgen_test_layout_NV_GPU_THERMAL_SETTINGS_V2() {
         )
     );
 }
+impl Default for NV_GPU_THERMAL_SETTINGS_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup gputhermal"]
 pub type NV_GPU_THERMAL_SETTINGS = NV_GPU_THERMAL_SETTINGS_V2;
 extern "C" {
@@ -11340,7 +11961,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup gpuclock\n! Used in NvAPI_GPU_GetAllClockFrequencies()"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_CLOCK_FREQUENCIES_V1 {
     #[doc = "!< Structure version"]
     pub version: NvU32,
@@ -11349,7 +11970,7 @@ pub struct NV_GPU_CLOCK_FREQUENCIES_V1 {
     pub domain: [NV_GPU_CLOCK_FREQUENCIES_V1__bindgen_ty_1; 32usize],
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_CLOCK_FREQUENCIES_V1__bindgen_ty_1 {
     pub _bitfield_align_1: [u32; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize]>,
@@ -11486,7 +12107,7 @@ pub const NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE_NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYP
 pub type NV_GPU_CLOCK_FREQUENCIES_CLOCK_TYPE = ::std::os::raw::c_int;
 #[doc = "! \\ingroup gpuclock\n! Used in NvAPI_GPU_GetAllClockFrequencies()"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_CLOCK_FREQUENCIES_V2 {
     #[doc = "!< Structure version"]
     pub version: NvU32,
@@ -11495,7 +12116,7 @@ pub struct NV_GPU_CLOCK_FREQUENCIES_V2 {
     pub domain: [NV_GPU_CLOCK_FREQUENCIES_V2__bindgen_ty_1; 32usize],
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GPU_CLOCK_FREQUENCIES_V2__bindgen_ty_1 {
     pub _bitfield_align_1: [u32; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize]>,
@@ -11756,6 +12377,15 @@ fn bindgen_test_layout__NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1() {
         )
     );
 }
+impl Default for _NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup gpu"]
 pub type NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1 = _NV_GPU_QUERY_ILLUMINATION_SUPPORT_PARM_V1;
 #[doc = "! \\ingroup gpu"]
@@ -11837,6 +12467,15 @@ fn bindgen_test_layout__NV_GPU_GET_ILLUMINATION_PARM_V1() {
             stringify!(Value)
         )
     );
+}
+impl Default for _NV_GPU_GET_ILLUMINATION_PARM_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! \\ingroup gpu"]
 pub type NV_GPU_GET_ILLUMINATION_PARM_V1 = _NV_GPU_GET_ILLUMINATION_PARM_V1;
@@ -11920,6 +12559,15 @@ fn bindgen_test_layout__NV_GPU_SET_ILLUMINATION_PARM_V1() {
         )
     );
 }
+impl Default for _NV_GPU_SET_ILLUMINATION_PARM_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup gpu"]
 pub type NV_GPU_SET_ILLUMINATION_PARM_V1 = _NV_GPU_SET_ILLUMINATION_PARM_V1;
 #[doc = "! \\ingroup gpu"]
@@ -11983,7 +12631,7 @@ pub const NV_GPU_CLIENT_ILLUM_PIECEWISE_LINEAR_CYCLE_TYPE_NV_GPU_CLIENT_ILLUM_PI
 pub type NV_GPU_CLIENT_ILLUM_PIECEWISE_LINEAR_CYCLE_TYPE = ::std::os::raw::c_int;
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1\n Describes the static information of illumination device type MCUV10."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_DATA_MCUV10 {
     #[doc = " I2C Device Index: Pointing to the illumination device in I2C Devices Table."]
     pub i2cDevIdx: NvU8,
@@ -12024,7 +12672,7 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_DEVICE_INFO_DATA_MCUV10() {
 pub type NV_GPU_CLIENT_ILLUM_DEVICE_INFO_DATA_MCUV10 = _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_DATA_MCUV10;
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1\n Describes the static information of illum device type GPIO_PWM_RGBW."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_DATA_GPIO_PWM_RGBW {
     #[doc = " Red drive GPIO pin."]
     pub gpioPinRed: NvU8,
@@ -12102,7 +12750,7 @@ pub type NV_GPU_CLIENT_ILLUM_DEVICE_INFO_DATA_GPIO_PWM_RGBW =
     _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_DATA_GPIO_PWM_RGBW;
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1\n Describes the static information of illum device type GPIO_PWM_SINGLE_COLOR."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_DATA_GPIO_PWM_SINGLE_COLOR {
     #[doc = " Single Color GPIO pin."]
     pub gpioPinSingleColor: NvU8,
@@ -12226,6 +12874,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1> =
@@ -12284,6 +12941,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1() {
             stringify!(rsvd)
         )
     );
+}
+impl Default for _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1 = _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_V1;
 #[repr(C)]
@@ -12359,6 +13025,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1 = _NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1;
 pub type NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS = NV_GPU_CLIENT_ILLUM_DEVICE_INFO_PARAMS_V1;
 extern "C" {
@@ -12428,6 +13103,15 @@ fn bindgen_test_layout_NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1() {
         )
     );
 }
+impl Default for NV_GPU_CLIENT_ILLUM_DEVICE_SYNC_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Structure representing the device control parameters of each ILLUM_DEVICE."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -12490,6 +13174,15 @@ fn bindgen_test_layout_NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1() {
             stringify!(rsvd)
         )
     );
+}
+impl Default for NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = " Structure representing the device control parameters of each ILLUM_DEVICE."]
 pub type NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL = NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_V1;
@@ -12567,6 +13260,15 @@ fn bindgen_test_layout_NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1() {
         )
     );
 }
+impl Default for NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Structure representing the control parameters of ILLUM_DEVICE-s."]
 pub type NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS = NV_GPU_CLIENT_ILLUM_DEVICE_CONTROL_PARAMS_V1;
 extern "C" {
@@ -12584,7 +13286,7 @@ extern "C" {
     ) -> NvAPI_Status;
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_INFO_DATA_RGB {
     pub rsvd: NvU8,
 }
@@ -12623,7 +13325,7 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_INFO_DATA_RGB() {
 pub type NV_GPU_CLIENT_ILLUM_ZONE_INFO_DATA_RGB = _NV_GPU_CLIENT_ILLUM_ZONE_INFO_DATA_RGB;
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1\n Describes the static information of illum zone type RGBW."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_INFO_DATA_RGBW {
     pub rsvd: NvU8,
 }
@@ -12663,7 +13365,7 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_INFO_DATA_RGBW() {
 pub type NV_GPU_CLIENT_ILLUM_ZONE_INFO_DATA_RGBW = _NV_GPU_CLIENT_ILLUM_ZONE_INFO_DATA_RGBW;
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1\n Describes the static information of illum zone type SINGLE_COLOR."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_INFO_DATA_SINGLE_COLOR {
     pub rsvd: NvU8,
 }
@@ -12786,6 +13488,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1> =
@@ -12865,6 +13576,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1 = _NV_GPU_CLIENT_ILLUM_ZONE_INFO_V1;
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -12939,6 +13659,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1 = _NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1;
 pub type NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS = NV_GPU_CLIENT_ILLUM_ZONE_INFO_PARAMS_V1;
 extern "C" {
@@ -12950,7 +13679,7 @@ extern "C" {
 }
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGB\n Parameters required to represent control mode of type\n \\ref NV_GPU_CLIENT_ILLUM_CTRL_MODE_MANUAL_RGB."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGB_PARAMS {
     #[doc = " Red compenent of color applied to the zone."]
     pub colorR: NvU8,
@@ -13029,7 +13758,7 @@ pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGB_PARAMS =
     _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGB_PARAMS;
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGB\n Data required to represent control mode of type\n \\ref NV_GPU_CLIENT_ILLUM_CTRL_MODE_MANUAL_RGB."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGB {
     #[doc = " Parameters required to represent control mode of type\n \\ref NV_GPU_CLIENT_ILLUM_CTRL_MODE_MANUAL_RGB."]
     pub rgbParams: NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGB_PARAMS,
@@ -13192,6 +13921,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR()
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Used in \\ref NV_GPU_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_RGB\n Data required to represent control mode of type\n \\ref NV_GPU_ILLUM_CTRL_MODE_PIECEWISE_LINEAR_RGB."]
 pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR =
     _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR;
@@ -13245,6 +13983,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_R
             stringify!(piecewiseLinearData)
         )
     );
+}
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_RGB {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGB\n Data required to represent control mode of type\n \\ref NV_GPU_CLIENT_ILLUM_CTRL_MODE_PIECEWISE_LINEAR_RGB."]
 pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_RGB =
@@ -13319,6 +14066,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGB__bindgen_ty_1(
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGB__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGB() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGB> =
@@ -13361,11 +14117,20 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGB() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGB {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1\n Describes the control data for illumination zone of type\n \\ref NV_GPU_CLIENT_ILLUM_ZONE_TYPE_RGB."]
 pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGB = _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGB;
 #[doc = " Used in \\ref NV_GPU_ILLUM_ZONE_CONTROL_DATA_MANUAL_COLOR_FIXED\n Parameters required to represent control mode of type\n \\ref NV_GPU_ILLUM_CTRL_MODE_MANUAL_RGB."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_COLOR_FIXED_PARAMS {
     #[doc = " Brightness percentage value of the zone."]
     pub brightnessPct: NvU8,
@@ -13408,7 +14173,7 @@ pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_COLOR_FIXED_PARAMS =
     _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_COLOR_FIXED_PARAMS;
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_COLOR_FIXED\n Data required to represent control mode of type\n \\ref NV_GPU_CLIENT_ILLUM_CTRL_MODE_MANUAL_RGB."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_COLOR_FIXED {
     #[doc = " Parameters required to represent control mode of type\n \\ref NV_GPU_CLIENT_ILLUM_CTRL_MODE_MANUAL_RGB."]
     pub colorFixedParams: NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_COLOR_FIXED_PARAMS,
@@ -13502,6 +14267,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_C
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_COLOR_FIXED {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_COLOR_FIXED\n Data required to represent control mode of type\n \\ref NV_GPU_CLIENT_ILLUM_CTRL_MODE_PIECEWISE_LINEAR_RGB."]
 pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_COLOR_FIXED =
     _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_COLOR_FIXED;
@@ -13576,6 +14350,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_COLOR_FIXED__bindg
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_COLOR_FIXED__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_COLOR_FIXED() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_COLOR_FIXED> =
@@ -13618,12 +14401,21 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_COLOR_FIXED() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_COLOR_FIXED {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1\n Describes the control data for illum zone of type\n \\ref NV_GPU_CLIENT_ILLUM_ZONE_TYPE_COLOR_FIXED."]
 pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_COLOR_FIXED =
     _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_COLOR_FIXED;
 #[doc = " Used in \\ref NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGBW\n Parameters required to represent control mode of type\n \\ref NV_GPU_CLIENT_ILLUM_CTRL_MODE_MANUAL_RGBW."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGBW_PARAMS {
     #[doc = " Red component of color applied to the zone."]
     pub colorR: NvU8,
@@ -13714,7 +14506,7 @@ pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGBW_PARAMS =
     _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGBW_PARAMS;
 #[doc = " Used in \\ref NV_GPU_ILLUM_ZONE_CONTROL_DATA_RGBW\n Data required to represent control mode of type\n \\ref NV_GPU_ILLUM_CTRL_MODE_MANUAL_RGBW."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGBW {
     #[doc = " Parameters required to represent control mode of type\n \\ref NV_GPU_ILLUM_CTRL_MODE_MANUAL_RGBW."]
     pub rgbwParams: NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_RGBW_PARAMS,
@@ -13805,6 +14597,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_R
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_RGBW {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Used in \\ref NV_GPU_ILLUM_ZONE_CONTROL_DATA_RGBW\n Data required to represent control mode of type\n \\ref NV_GPU_ILLUM_CTRL_MODE_PIECEWISE_LINEAR_RGBW."]
 pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_RGBW =
     _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_RGBW;
@@ -13878,6 +14679,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGBW__bindgen_ty_1
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGBW__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGBW() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGBW> =
@@ -13920,11 +14730,20 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGBW() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGBW {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Used in \\ref NV_GPU_ILLUM_ZONE_CONTROL_V1\n Describes the control data for illum zone of type\n \\ref NV_GPU_ILLUM_ZONE_TYPE_RGBW."]
 pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGBW = _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_RGBW;
 #[doc = " Used in \\ref NV_GPU_ILLUM_ZONE_CONTROL_DATA_MANUAL_SINGLE_COLOR\n Parameters required to represent control mode of type\n \\ref NV_GPU_ILLUM_CTRL_MODE_MANUAL_SINGLE_COLOR."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_SINGLE_COLOR_PARAMS {
     #[doc = " Brightness percentage value of the zone."]
     pub brightnessPct: NvU8,
@@ -13967,7 +14786,7 @@ pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_SINGLE_COLOR_PARAMS =
     _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_SINGLE_COLOR_PARAMS;
 #[doc = " Used in \\ref NV_GPU_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR\n Data required to represent control mode of type\n \\ref NV_GPU_ILLUM_CTRL_MODE_MANUAL_SINGLE_COLOR."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_SINGLE_COLOR {
     #[doc = " Parameters required to represent control mode of type\n \\ref NV_GPU_ILLUM_CTRL_MODE_MANUAL_SINGLE_COLOR."]
     pub singleColorParams: NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_MANUAL_SINGLE_COLOR_PARAMS,
@@ -14062,6 +14881,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_S
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_SINGLE_COLOR {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Used in \\ref NV_GPU_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR\n Data required to represent control mode of type\n \\ref NV_GPU_ILLUM_CTRL_MODE_PIECEWISE_LINEAR_SINGLE_COLOR."]
 pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_SINGLE_COLOR =
     _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_PIECEWISE_LINEAR_SINGLE_COLOR;
@@ -14136,6 +14964,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR__bind
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR> =
@@ -14177,6 +15014,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR() {
             stringify!(rsvd)
         )
     );
+}
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = " Used in \\ref NV_GPU_ILLUM_ZONE_CONTROL_V1\n Describes the control data for illum zone of type\n \\ref NV_GPU_ILLUM_ZONE_TYPE_SINGLE_COLOR."]
 pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_DATA_SINGLE_COLOR =
@@ -14270,6 +15116,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1> =
@@ -14331,6 +15186,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1() {
             stringify!(rsvd)
         )
     );
+}
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1 = _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_V1;
 #[repr(C)]
@@ -14406,6 +15270,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1() {
             stringify!(zones)
         )
     );
+}
+impl Default for _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_GPU_CLIENT_ILLUM_ZONE_CONTROL_PARAMS_V1 {
     #[inline]
@@ -14696,6 +15569,15 @@ fn bindgen_test_layout__NV_DISPLAY_PORT_INFO_V1() {
             stringify!(bpc)
         )
     );
+}
+impl Default for _NV_DISPLAY_PORT_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_DISPLAY_PORT_INFO_V1 {
     #[inline]
@@ -15302,6 +16184,15 @@ fn bindgen_test_layout_NV_DISPLAY_PORT_CONFIG() {
         )
     );
 }
+impl Default for NV_DISPLAY_PORT_CONFIG {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl NV_DISPLAY_PORT_CONFIG {
     #[inline]
     pub fn isHPD(&self) -> NvU32 {
@@ -15416,7 +16307,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup dispcontrol\n! Used in NvAPI_GetHDMISupportInfo()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDMI_SUPPORT_INFO_V1 {
     #[doc = "!< Structure version"]
     pub version: NvU32,
@@ -15618,7 +16509,7 @@ impl _NV_HDMI_SUPPORT_INFO_V1 {
 #[doc = "! \\ingroup dispcontrol\n! Used in NvAPI_GetHDMISupportInfo()."]
 pub type NV_HDMI_SUPPORT_INFO_V1 = _NV_HDMI_SUPPORT_INFO_V1;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDMI_SUPPORT_INFO_V2 {
     #[doc = "!< Structure version"]
     pub version: NvU32,
@@ -15915,7 +16806,7 @@ pub const NV_INFOFRAME_PROPERTY_BLACKLIST_NV_INFOFRAME_PROPERTY_BLACKLIST_TRUE:
 pub type NV_INFOFRAME_PROPERTY_BLACKLIST = ::std::os::raw::c_int;
 #[repr(C)]
 #[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_INFOFRAME_PROPERTY {
     pub _bitfield_align_1: [u16; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize]>,
@@ -16162,7 +17053,7 @@ pub type NV_INFOFRAME_FIELD_VALUE_AVI_YCCQUANTIZATION = ::std::os::raw::c_int;
 #[doc = "! Adding an Auto bit to each field"]
 #[repr(C)]
 #[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_INFOFRAME_VIDEO {
     pub _bitfield_align_1: [u32; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 23usize]>,
@@ -16692,7 +17583,7 @@ pub const NV_INFOFRAME_FIELD_VALUE_AUDIO_DOWNMIX_NV_INFOFRAME_FIELD_VALUE_AUDIO_
 pub type NV_INFOFRAME_FIELD_VALUE_AUDIO_DOWNMIX = ::std::os::raw::c_int;
 #[repr(C)]
 #[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_INFOFRAME_AUDIO {
     pub _bitfield_align_1: [u16; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 14usize]>,
@@ -17074,6 +17965,15 @@ fn bindgen_test_layout_NV_INFOFRAME_DATA__bindgen_ty_1() {
         )
     );
 }
+impl Default for NV_INFOFRAME_DATA__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_INFOFRAME_DATA() {
     const UNINIT: ::std::mem::MaybeUninit<NV_INFOFRAME_DATA> = ::std::mem::MaybeUninit::uninit();
@@ -17138,6 +18038,15 @@ fn bindgen_test_layout_NV_INFOFRAME_DATA() {
             stringify!(infoframe)
         )
     );
+}
+impl Default for NV_INFOFRAME_DATA {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 extern "C" {
     #[doc = "! DESCRIPTION:     This API controls the InfoFrame values.\n!\n! SUPPORTED OS:  Windows 7 and higher\n!\n!\n! \\param [in]     displayId         Monitor Identifier\n! \\param [in,out] pInfoframeData    Contains data corresponding to InfoFrame\n!\n! \\return    This API can return any of the error codes enumerated in #NvAPI_Status. If there are return error codes with\n!            specific meaning for this API, they are listed below.\n!\n! \\ingroup dispcontrol\n"]
@@ -17209,7 +18118,7 @@ pub const _NV_DESKTOP_COLOR_DEPTH_NV_DESKTOP_COLOR_DEPTH_MAX_VALUE: _NV_DESKTOP_
 pub type _NV_DESKTOP_COLOR_DEPTH = ::std::os::raw::c_int;
 pub use self::_NV_DESKTOP_COLOR_DEPTH as NV_DESKTOP_COLOR_DEPTH;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_COLOR_DATA_V1 {
     #[doc = "!< Version of this structure"]
     pub version: NvU32,
@@ -17219,7 +18128,7 @@ pub struct _NV_COLOR_DATA_V1 {
     pub data: _NV_COLOR_DATA_V1__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_COLOR_DATA_V1__bindgen_ty_1 {
     #[doc = "!< One of NV_COLOR_FORMAT enum values."]
     pub colorFormat: NvU8,
@@ -17319,7 +18228,7 @@ fn bindgen_test_layout__NV_COLOR_DATA_V1() {
 }
 pub type NV_COLOR_DATA_V1 = _NV_COLOR_DATA_V1;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_COLOR_DATA_V2 {
     #[doc = "!< Version of this structure"]
     pub version: NvU32,
@@ -17329,7 +18238,7 @@ pub struct _NV_COLOR_DATA_V2 {
     pub data: _NV_COLOR_DATA_V2__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_COLOR_DATA_V2__bindgen_ty_1 {
     #[doc = "!< One of NV_COLOR_FORMAT enum values."]
     pub colorFormat: NvU8,
@@ -17518,6 +18427,15 @@ fn bindgen_test_layout__NV_COLOR_DATA_V3__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NV_COLOR_DATA_V3__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_COLOR_DATA_V3() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_COLOR_DATA_V3> = ::std::mem::MaybeUninit::uninit();
@@ -17572,6 +18490,15 @@ fn bindgen_test_layout__NV_COLOR_DATA_V3() {
             stringify!(data)
         )
     );
+}
+impl Default for _NV_COLOR_DATA_V3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NV_COLOR_DATA_V3 = _NV_COLOR_DATA_V3;
 #[repr(C)]
@@ -17664,6 +18591,15 @@ fn bindgen_test_layout__NV_COLOR_DATA_V4__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NV_COLOR_DATA_V4__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_COLOR_DATA_V4() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_COLOR_DATA_V4> = ::std::mem::MaybeUninit::uninit();
@@ -17718,6 +18654,15 @@ fn bindgen_test_layout__NV_COLOR_DATA_V4() {
             stringify!(data)
         )
     );
+}
+impl Default for _NV_COLOR_DATA_V4 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NV_COLOR_DATA_V4 = _NV_COLOR_DATA_V4;
 #[repr(C)]
@@ -17822,6 +18767,15 @@ fn bindgen_test_layout__NV_COLOR_DATA_V5__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NV_COLOR_DATA_V5__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_COLOR_DATA_V5() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_COLOR_DATA_V5> = ::std::mem::MaybeUninit::uninit();
@@ -17877,6 +18831,15 @@ fn bindgen_test_layout__NV_COLOR_DATA_V5() {
         )
     );
 }
+impl Default for _NV_COLOR_DATA_V5 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NV_COLOR_DATA_V5 = _NV_COLOR_DATA_V5;
 pub type NV_COLOR_DATA = NV_COLOR_DATA_V5;
 extern "C" {
@@ -17902,7 +18865,7 @@ pub struct _NV_HDR_CAPABILITIES_V1 {
     pub display_data: _NV_HDR_CAPABILITIES_V1__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDR_CAPABILITIES_V1__bindgen_ty_1 {
     #[doc = "!< x coordinate of color primary 0 (e.g. Red) of the display ([0x0000-0xC350] = [0.0 - 1.0])"]
     pub displayPrimary_x0: NvU16,
@@ -18114,6 +19077,15 @@ fn bindgen_test_layout__NV_HDR_CAPABILITIES_V1() {
         )
     );
 }
+impl Default for _NV_HDR_CAPABILITIES_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_HDR_CAPABILITIES_V1 {
     #[inline]
     pub fn isST2084EotfSupported(&self) -> NvU32 {
@@ -18236,7 +19208,7 @@ pub struct _NV_HDR_CAPABILITIES_V2 {
     pub dv_static_metadata: _NV_HDR_CAPABILITIES_V2__bindgen_ty_2,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDR_CAPABILITIES_V2__bindgen_ty_1 {
     #[doc = "!< x coordinate of color primary 0 (e.g. Red) of the display ([0x0000-0xC350] = [0.0 - 1.0])"]
     pub displayPrimary_x0: NvU16,
@@ -18402,7 +19374,7 @@ fn bindgen_test_layout__NV_HDR_CAPABILITIES_V2__bindgen_ty_1() {
 }
 #[repr(C)]
 #[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDR_CAPABILITIES_V2__bindgen_ty_2 {
     pub _bitfield_align_1: [u16; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize]>,
@@ -18795,6 +19767,15 @@ fn bindgen_test_layout__NV_HDR_CAPABILITIES_V2() {
         )
     );
 }
+impl Default for _NV_HDR_CAPABILITIES_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_HDR_CAPABILITIES_V2 {
     #[inline]
     pub fn isST2084EotfSupported(&self) -> NvU32 {
@@ -18935,7 +19916,7 @@ pub struct _NV_HDR_CAPABILITIES_V3 {
     pub hdr10plus_vsvdb: _NV_HDR_CAPABILITIES_V3__bindgen_ty_3,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDR_CAPABILITIES_V3__bindgen_ty_1 {
     #[doc = "!< x coordinate of color primary 0 (e.g. Red) of the display ([0x0000-0xC350] = [0.0 - 1.0])"]
     pub displayPrimary_x0: NvU16,
@@ -19101,7 +20082,7 @@ fn bindgen_test_layout__NV_HDR_CAPABILITIES_V3__bindgen_ty_1() {
 }
 #[repr(C)]
 #[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDR_CAPABILITIES_V3__bindgen_ty_2 {
     pub _bitfield_align_1: [u8; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize]>,
@@ -19454,7 +20435,7 @@ impl _NV_HDR_CAPABILITIES_V3__bindgen_ty_2 {
 }
 #[repr(C)]
 #[repr(align(2))]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDR_CAPABILITIES_V3__bindgen_ty_3 {
     pub _bitfield_align_1: [u8; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 2usize]>,
@@ -19618,6 +20599,15 @@ fn bindgen_test_layout__NV_HDR_CAPABILITIES_V3() {
             stringify!(hdr10plus_vsvdb)
         )
     );
+}
+impl Default for _NV_HDR_CAPABILITIES_V3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_HDR_CAPABILITIES_V3 {
     #[inline]
@@ -19822,7 +20812,7 @@ pub struct _NV_HDR_COLOR_DATA_V1 {
     pub mastering_display_data: _NV_HDR_COLOR_DATA_V1__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDR_COLOR_DATA_V1__bindgen_ty_1 {
     #[doc = "!< x coordinate of color primary 0 (e.g. Red) of mastering display ([0x0000-0xC350] = [0.0 - 1.0])"]
     pub displayPrimary_x0: NvU16,
@@ -20062,6 +21052,15 @@ fn bindgen_test_layout__NV_HDR_COLOR_DATA_V1() {
         )
     );
 }
+impl Default for _NV_HDR_COLOR_DATA_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NV_HDR_COLOR_DATA_V1 = _NV_HDR_COLOR_DATA_V1;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -20083,7 +21082,7 @@ pub struct _NV_HDR_COLOR_DATA_V2 {
     pub hdrBpc: NV_BPC,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDR_COLOR_DATA_V2__bindgen_ty_1 {
     #[doc = "!< x coordinate of color primary 0 (e.g. Red) of mastering display ([0x0000-0xC350] = [0.0 - 1.0])"]
     pub displayPrimary_x0: NvU16,
@@ -20353,6 +21352,15 @@ fn bindgen_test_layout__NV_HDR_COLOR_DATA_V2() {
         )
     );
 }
+impl Default for _NV_HDR_COLOR_DATA_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NV_HDR_COLOR_DATA_V2 = _NV_HDR_COLOR_DATA_V2;
 pub type NV_HDR_COLOR_DATA = NV_HDR_COLOR_DATA_V2;
 extern "C" {
@@ -20383,7 +21391,7 @@ extern "C" {
     ) -> NvAPI_Status;
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_HDR_METADATA_V1 {
     #[doc = "!< Version of this structure"]
     pub version: NvU32,
@@ -20644,6 +21652,15 @@ fn bindgen_test_layout_NV_TIMING_FLAG__bindgen_ty_1() {
         concat!("Alignment of ", stringify!(NV_TIMING_FLAG__bindgen_ty_1))
     );
 }
+impl Default for NV_TIMING_FLAG__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl NV_TIMING_FLAG__bindgen_ty_1 {
     #[inline]
     pub fn tvFormat(&self) -> NvU32 {
@@ -20712,6 +21729,15 @@ fn bindgen_test_layout_NV_TIMING_FLAG() {
         4usize,
         concat!("Alignment of ", stringify!(NV_TIMING_FLAG))
     );
+}
+impl Default for NV_TIMING_FLAG {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl NV_TIMING_FLAG {
     #[inline]
@@ -20865,6 +21891,15 @@ fn bindgen_test_layout__NV_TIMING_INPUT() {
         )
     );
 }
+impl Default for _NV_TIMING_INPUT {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup dispcontrol\n! Used in NvAPI_DISP_GetTiming()."]
 pub type NV_TIMING_INPUT = _NV_TIMING_INPUT;
 extern "C" {
@@ -20881,7 +21916,7 @@ pub const NV_MONITOR_CAPS_TYPE_NV_MONITOR_CAPS_TYPE_GENERIC: NV_MONITOR_CAPS_TYP
 #[doc = "! HDMI-related and extended CAPs"]
 pub type NV_MONITOR_CAPS_TYPE = ::std::os::raw::c_int;
 #[repr(C, packed)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_MONITOR_CAPS_VCDB {
     pub _bitfield_align_1: [u8; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
@@ -20993,7 +22028,7 @@ impl _NV_MONITOR_CAPS_VCDB {
 pub type NV_MONITOR_CAPS_VCDB = _NV_MONITOR_CAPS_VCDB;
 #[doc = "! See NvAPI_DISP_GetMonitorCapabilities()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_MONITOR_CAPS_VSDB {
     pub _bitfield_align_1: [u8; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 3usize]>,
@@ -21507,7 +22542,7 @@ impl _NV_MONITOR_CAPS_VSDB {
 #[doc = "! See NvAPI_DISP_GetMonitorCapabilities()."]
 pub type NV_MONITOR_CAPS_VSDB = _NV_MONITOR_CAPS_VSDB;
 #[repr(C, packed)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_MONITOR_CAPS_GENERIC {
     pub _bitfield_align_1: [u8; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 1usize]>,
@@ -21702,6 +22737,15 @@ fn bindgen_test_layout__NV_MONITOR_CAPABILITIES_V1__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NV_MONITOR_CAPABILITIES_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_MONITOR_CAPABILITIES_V1() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_MONITOR_CAPABILITIES_V1> =
@@ -21767,6 +22811,15 @@ fn bindgen_test_layout__NV_MONITOR_CAPABILITIES_V1() {
             stringify!(data)
         )
     );
+}
+impl Default for _NV_MONITOR_CAPABILITIES_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_MONITOR_CAPABILITIES_V1 {
     #[inline]
@@ -21856,6 +22909,15 @@ fn bindgen_test_layout__NV_MONITOR_COLOR_DATA() {
             stringify!(backendBitDepths)
         )
     );
+}
+impl Default for _NV_MONITOR_COLOR_DATA {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! \\ingroup dispcontrol"]
 pub type NV_MONITOR_COLOR_CAPS_V1 = _NV_MONITOR_COLOR_DATA;
@@ -21999,6 +23061,15 @@ fn bindgen_test_layout_NV_CUSTOM_DISPLAY() {
         )
     );
 }
+impl Default for NV_CUSTOM_DISPLAY {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl NV_CUSTOM_DISPLAY {
     #[inline]
     pub fn hwModeSetOnly(&self) -> NvU32 {
@@ -22110,7 +23181,7 @@ extern "C" {
     ) -> NvAPI_Status;
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GET_ADAPTIVE_SYNC_DATA_V1 {
     #[doc = "!< [in]    structure version"]
     pub version: NvU32,
@@ -22258,7 +23329,7 @@ extern "C" {
     ) -> NvAPI_Status;
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_SET_ADAPTIVE_SYNC_DATA_V1 {
     #[doc = "!< [in]    structure version"]
     pub version: NvU32,
@@ -22382,7 +23453,7 @@ extern "C" {
     ) -> NvAPI_Status;
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GET_VIRTUAL_REFRESH_RATE_DATA_V1 {
     #[doc = "!< [in]    structure version"]
     pub version: NvU32,
@@ -22453,7 +23524,7 @@ extern "C" {
     ) -> NvAPI_Status;
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_SET_VIRTUAL_REFRESH_RATE_DATA_V1 {
     #[doc = "!< [in]   structure version"]
     pub version: NvU32,
@@ -22525,7 +23596,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup dispcontrol"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_SET_PREFERRED_STEREO_DISPLAY_V1 {
     #[doc = "!< [in] Structure version"]
     pub version: NvU32,
@@ -22593,7 +23664,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup dispcontrol"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_GET_PREFERRED_STEREO_DISPLAY_V1 {
     #[doc = "!< [in] Structure version"]
     pub version: NvU32,
@@ -22661,7 +23732,7 @@ extern "C" {
 }
 #[doc = "! \\ingroup dispcontrol"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GET_VRR_INFO_V1 {
     #[doc = "!< [in]  Structure version"]
     pub version: NvU32,
@@ -22843,6 +23914,15 @@ fn bindgen_test_layout_NV_MOSAIC_TOPO_DETAILS__bindgen_ty_1() {
         )
     );
 }
+impl Default for NV_MOSAIC_TOPO_DETAILS__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_MOSAIC_TOPO_DETAILS() {
     const UNINIT: ::std::mem::MaybeUninit<NV_MOSAIC_TOPO_DETAILS> =
@@ -22918,6 +23998,15 @@ fn bindgen_test_layout_NV_MOSAIC_TOPO_DETAILS() {
             stringify!(gpuLayout)
         )
     );
+}
+impl Default for NV_MOSAIC_TOPO_DETAILS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "!< All mosaic topologies"]
 pub const NV_MOSAIC_TOPO_TYPE_NV_MOSAIC_TOPO_TYPE_ALL: NV_MOSAIC_TOPO_TYPE = 0;
@@ -23031,9 +24120,18 @@ fn bindgen_test_layout_NV_MOSAIC_TOPO_BRIEF() {
         )
     );
 }
+impl Default for NV_MOSAIC_TOPO_BRIEF {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Basic per-display settings that are used in setting/getting the Mosaic mode"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_MOSAIC_DISPLAY_SETTING_V1 {
     #[doc = "!< Version of this structure"]
     pub version: NvU32,
@@ -23115,7 +24213,7 @@ fn bindgen_test_layout__NV_MOSAIC_DISPLAY_SETTING_V1() {
 #[doc = "! Basic per-display settings that are used in setting/getting the Mosaic mode"]
 pub type NV_MOSAIC_DISPLAY_SETTING_V1 = _NV_MOSAIC_DISPLAY_SETTING_V1;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_MOSAIC_DISPLAY_SETTING_V2 {
     #[doc = "!< Version of this structure"]
     pub version: NvU32,
@@ -23291,6 +24389,15 @@ fn bindgen_test_layout__NV_MOSAIC_SUPPORTED_TOPO_INFO_V1() {
         )
     );
 }
+impl Default for _NV_MOSAIC_SUPPORTED_TOPO_INFO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! This structure is used to contain a list of supported Mosaic topologies\n! along with the display settings that can be used."]
 pub type NV_MOSAIC_SUPPORTED_TOPO_INFO_V1 = _NV_MOSAIC_SUPPORTED_TOPO_INFO_V1;
 #[repr(C)]
@@ -23376,6 +24483,15 @@ fn bindgen_test_layout__NV_MOSAIC_SUPPORTED_TOPO_INFO_V2() {
         )
     );
 }
+impl Default for _NV_MOSAIC_SUPPORTED_TOPO_INFO_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NV_MOSAIC_SUPPORTED_TOPO_INFO_V2 = _NV_MOSAIC_SUPPORTED_TOPO_INFO_V2;
 pub type NV_MOSAIC_SUPPORTED_TOPO_INFO = NV_MOSAIC_SUPPORTED_TOPO_INFO_V2;
 #[doc = "! This structure defines a group of topologies that work together to create one\n! overall layout.  All of the supported topologies are represented with this\n! structure.\n!\n! For example, a 'Passive Stereo' topology would be represented with this\n! structure, and would have separate topology details for the left and right eyes.\n! The count would be 2.  A 'Basic' topology is also represented by this structure,\n! with a count of 1.\n!\n! The structure is primarily used internally, but is exposed to applications in a\n! read-only fashion because there are some details in it that might be useful\n! (like the number of rows/cols, or connected display information).  A user can\n! get the filled-in structure by calling NvAPI_Mosaic_GetTopoGroup().\n!\n! You can then look at the detailed values within the structure.  There are no\n! entrypoints which take this structure as input (effectively making it read-only)."]
@@ -23444,6 +24560,15 @@ fn bindgen_test_layout_NV_MOSAIC_TOPO_GROUP() {
             stringify!(topos)
         )
     );
+}
+impl Default for NV_MOSAIC_TOPO_GROUP {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 extern "C" {
     #[doc = "! \\retval ::NVAPI_ERROR:                      Miscellaneous error occurred.\n!\n! \\ingroup mosaicapi\n"]
@@ -23574,6 +24699,15 @@ fn bindgen_test_layout__NV_MOSAIC_GRID_TOPO_DISPLAY_V1() {
         )
     );
 }
+impl Default for _NV_MOSAIC_GRID_TOPO_DISPLAY_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup mosaicapi\n! @{"]
 pub type NV_MOSAIC_GRID_TOPO_DISPLAY_V1 = _NV_MOSAIC_GRID_TOPO_DISPLAY_V1;
 #[doc = "!< No pixel shift will be applied to this display."]
@@ -23693,6 +24827,15 @@ fn bindgen_test_layout__NV_MOSAIC_GRID_TOPO_DISPLAY_V2() {
         )
     );
 }
+impl Default for _NV_MOSAIC_GRID_TOPO_DISPLAY_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NV_MOSAIC_GRID_TOPO_DISPLAY_V2 = _NV_MOSAIC_GRID_TOPO_DISPLAY_V2;
 #[doc = "! \\ingroup mosaicapi\n! @{"]
 pub type NV_MOSAIC_GRID_TOPO_DISPLAY = NV_MOSAIC_GRID_TOPO_DISPLAY_V1;
@@ -23789,6 +24932,15 @@ fn bindgen_test_layout__NV_MOSAIC_GRID_TOPO_V1() {
             stringify!(displaySettings)
         )
     );
+}
+impl Default for _NV_MOSAIC_GRID_TOPO_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_MOSAIC_GRID_TOPO_V1 {
     #[inline]
@@ -23991,6 +25143,15 @@ fn bindgen_test_layout__NV_MOSAIC_GRID_TOPO_V2() {
         )
     );
 }
+impl Default for _NV_MOSAIC_GRID_TOPO_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_MOSAIC_GRID_TOPO_V2 {
     #[inline]
     pub fn applyWithBezelCorrect(&self) -> NvU32 {
@@ -24137,7 +25298,7 @@ pub struct NV_MOSAIC_DISPLAY_TOPO_STATUS {
     pub displays: [NV_MOSAIC_DISPLAY_TOPO_STATUS__bindgen_ty_1; 128usize],
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_MOSAIC_DISPLAY_TOPO_STATUS__bindgen_ty_1 {
     #[doc = "!< (OUT) The DisplayID of this display."]
     pub displayId: NvU32,
@@ -24306,6 +25467,15 @@ fn bindgen_test_layout_NV_MOSAIC_DISPLAY_TOPO_STATUS() {
         )
     );
 }
+impl Default for NV_MOSAIC_DISPLAY_TOPO_STATUS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 extern "C" {
     #[doc = "! DESCRIPTION:     Determines if a list of grid topologies is valid. It will choose an SLI\n!                  configuration in the same way that NvAPI_Mosaic_SetDisplayGrids() does.\n!\n!                  On return, each element in the pTopoStatus array will contain any errors or\n!                  warnings about each grid topology. If any error flags are set, then the topology\n!                  is not valid. If any warning flags are set, then the topology is valid, but\n!                  sub-optimal.\n!\n!                  If the ALLOW_INVALID flag is set, then it will continue to validate the grids\n!                  even if no SLI configuration will allow all of the grids. In this case, a grid\n!                  grid with no matching GPU topology will have the error\n!                  flags NO_GPU_TOPOLOGY or NOT_SUPPORTED set.\n!\n!                  If the ALLOW_INVALID flag is not set and no matching SLI configuration is\n!                  found, then it will skip the rest of the validation and return\n!                  NVAPI_NO_ACTIVE_SLI_TOPOLOGY.\n!\n! SUPPORTED OS:  Windows 7 and higher\n!\n!\n! \\param [in]      setTopoFlags       Zero or more of the NVAPI_MOSAIC_SETDISPLAYTOPO_FLAG_*\n!                                     flags.\n! \\param [in]      pGridTopologies    The array of grid topologies to verify.\n! \\param [in,out]  pTopoStatus        The array of problems and warnings with each grid topology.\n! \\param [in]      gridCount          The number of elements in the pGridTopologies and\n!                                     pTopoStatus arrays.\n!\n!\n! \\retval ::NVAPI_OK:                          Capabilities have been returned.\n! \\retval ::NVAPI_INVALID_ARGUMENT:            One or more args passed in are invalid.\n! \\retval ::NVAPI_API_NOT_INTIALIZED:          The NvAPI API needs to be initialized first\n! \\retval ::NVAPI_NO_IMPLEMENTATION:           This entrypoint not available\n! \\retval ::NVAPI_NO_ACTIVE_SLI_TOPOLOGY:      No matching GPU topologies could be found.\n! \\retval ::NVAPI_ERROR:                       Miscellaneous error occurred\n!\n! \\ingroup mosaicapi\n"]
     pub fn NvAPI_Mosaic_ValidateDisplayGrids(
@@ -24413,6 +25583,15 @@ fn bindgen_test_layout_NV_MOSAIC_TOPOLOGY__bindgen_ty_1() {
         )
     );
 }
+impl Default for NV_MOSAIC_TOPOLOGY__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout_NV_MOSAIC_TOPOLOGY() {
     const UNINIT: ::std::mem::MaybeUninit<NV_MOSAIC_TOPOLOGY> = ::std::mem::MaybeUninit::uninit();
@@ -24467,6 +25646,15 @@ fn bindgen_test_layout_NV_MOSAIC_TOPOLOGY() {
             stringify!(gpuLayout)
         )
     );
+}
+impl Default for NV_MOSAIC_TOPOLOGY {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! Used in NvAPI_GetSupportedMosaicTopologies()."]
 #[repr(C)]
@@ -24524,6 +25712,15 @@ fn bindgen_test_layout_NV_MOSAIC_SUPPORTED_TOPOLOGIES() {
         )
     );
 }
+impl Default for NV_MOSAIC_SUPPORTED_TOPOLOGIES {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 extern "C" {
     #[doc = "! DESCRIPTION:     This API returns all valid Mosaic topologies.\n!\n! SUPPORTED OS:  Windows XP\n!\n!\n! \\since Release: 177\n!\n! \\param [out] pMosaicTopos                   An array of valid Mosaic topologies.\n!\n! \\retval      NVAPI_OK                       Call succeeded; 1 or more topologies were returned\n! \\retval      NVAPI_INVALID_ARGUMENT         One or more arguments are invalid\n! \\retval      NVAPI_MIXED_TARGET_TYPES       Mosaic topology is only possible with all targets of the same NV_GPU_OUTPUT_TYPE.\n! \\retval      NVAPI_NVIDIA_DEVICE_NOT_FOUND  No NVIDIA GPU driving a display was found\n! \\retval      NVAPI_NOT_SUPPORTED            Mosaic is not supported with GPUs on this system.\n! \\retval      NVAPI_NO_ACTIVE_SLI_TOPOLOGY   SLI is not enabled, yet needs to be, in order for this function to succeed.\n!\n! \\ingroup     mosaicapi\n"]
     pub fn NvAPI_GetSupportedMosaicTopologies(
@@ -24554,7 +25751,7 @@ extern "C" {
 }
 #[doc = "! Used in NvAPI_GSync_QueryCapabilities()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GSYNC_CAPABILITIES_V1 {
     #[doc = "!< Version of the structure"]
     pub version: NvU32,
@@ -24624,7 +25821,7 @@ fn bindgen_test_layout__NV_GSYNC_CAPABILITIES_V1() {
 #[doc = "! Used in NvAPI_GSync_QueryCapabilities()."]
 pub type NV_GSYNC_CAPABILITIES_V1 = _NV_GSYNC_CAPABILITIES_V1;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GSYNC_CAPABILITIES_V2 {
     #[doc = "!< Version of the structure"]
     pub version: NvU32,
@@ -24705,7 +25902,7 @@ fn bindgen_test_layout__NV_GSYNC_CAPABILITIES_V2() {
 }
 pub type NV_GSYNC_CAPABILITIES_V2 = _NV_GSYNC_CAPABILITIES_V2;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GSYNC_CAPABILITIES_V3 {
     #[doc = "!< Version of the structure"]
     pub version: NvU32,
@@ -24941,6 +26138,15 @@ fn bindgen_test_layout__NV_GSYNC_GPU() {
         )
     );
 }
+impl Default for _NV_GSYNC_GPU {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_GSYNC_GPU {
     #[inline]
     pub fn isSynced(&self) -> NvU32 {
@@ -25036,6 +26242,15 @@ fn bindgen_test_layout__NV_GSYNC_DISPLAY() {
         )
     );
 }
+impl Default for _NV_GSYNC_DISPLAY {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_GSYNC_DISPLAY {
     #[inline]
     pub fn isMasterable(&self) -> NvU32 {
@@ -25119,7 +26334,7 @@ pub type _NVAPI_GSYNC_SYNC_SOURCE = ::std::os::raw::c_int;
 pub use self::_NVAPI_GSYNC_SYNC_SOURCE as NVAPI_GSYNC_SYNC_SOURCE;
 #[doc = "! Used in NV_GSYNC_CONTROL_PARAMS."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GSYNC_DELAY {
     #[doc = "!< Version of the structure"]
     pub version: NvU32,
@@ -25305,6 +26520,15 @@ fn bindgen_test_layout__NV_GSYNC_CONTROL_PARAMS_V1() {
             stringify!(startupDelay)
         )
     );
+}
+impl Default for _NV_GSYNC_CONTROL_PARAMS_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_GSYNC_CONTROL_PARAMS_V1 {
     #[inline]
@@ -25504,6 +26728,15 @@ fn bindgen_test_layout__NV_GSYNC_CONTROL_PARAMS_V2() {
         )
     );
 }
+impl Default for _NV_GSYNC_CONTROL_PARAMS_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_GSYNC_CONTROL_PARAMS_V2 {
     #[inline]
     pub fn interlaceMode(&self) -> NvU32 {
@@ -25594,7 +26827,7 @@ extern "C" {
 }
 #[doc = "! Used in NvAPI_GSync_GetSyncStatus()."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_GSYNC_STATUS {
     #[doc = "!< Version of the structure"]
     pub version: NvU32,
@@ -25770,6 +27003,15 @@ fn bindgen_test_layout__NV_GSYNC_STATUS_PARAMS_V1() {
         )
     );
 }
+impl Default for _NV_GSYNC_STATUS_PARAMS_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! \\ingroup gsyncapi\n! Used in NvAPI_GSync_GetStatusParameters()."]
 pub type NV_GSYNC_STATUS_PARAMS_V1 = _NV_GSYNC_STATUS_PARAMS_V1;
 #[repr(C)]
@@ -25865,6 +27107,15 @@ fn bindgen_test_layout__NV_GSYNC_STATUS_PARAMS_V2() {
         )
     );
 }
+impl Default for _NV_GSYNC_STATUS_PARAMS_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_GSYNC_STATUS_PARAMS_V2 {
     #[inline]
     pub fn bInternalSlave(&self) -> NvU32 {
@@ -25933,7 +27184,7 @@ pub type _NV_RESOLVE_MODE = ::std::os::raw::c_int;
 pub use self::_NV_RESOLVE_MODE as NV_RESOLVE_MODE;
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used to query the support of Single Pass Stereo HW feature\n! \\ingroup dx"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V1 {
     pub version: NvU32,
     pub bSinglePassStereoSupported: NvU32,
@@ -25984,7 +27235,7 @@ fn bindgen_test_layout__NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V1() {
 pub type NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V1 =
     _NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V1;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2 {
     pub version: NvU32,
     pub _bitfield_align_1: [u32; 0],
@@ -26085,7 +27336,7 @@ pub type NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2 =
 pub type NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS = NV_QUERY_SINGLE_PASS_STEREO_SUPPORT_PARAMS_V2;
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used to query the support of MultiView HW feature\n! \\ingroup dx"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1 {
     pub version: NvU32,
     pub _bitfield_align_1: [u32; 0],
@@ -26203,7 +27454,7 @@ pub type NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1 = _NV_QUERY_MULTIVIEW_SUPPORT_PARA
 pub type NV_QUERY_MULTIVIEW_SUPPORT_PARAMS = NV_QUERY_MULTIVIEW_SUPPORT_PARAMS_V1;
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used for setting the Mode for MultiView HW Feature.\n! \\ingroup dx"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_MULTIVIEW_PARAMS_V1 {
     pub version: NvU32,
     pub numViews: NvU32,
@@ -26274,7 +27525,7 @@ pub type NV_MULTIVIEW_PARAMS_V1 = _NV_MULTIVIEW_PARAMS_V1;
 pub type NV_MULTIVIEW_PARAMS = NV_MULTIVIEW_PARAMS_V1;
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used to query the support of Lens Matched Shading HW feature\n! \\ingroup dx"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_QUERY_MODIFIED_W_SUPPORT_PARAMS {
     pub version: NvU32,
     pub bModifiedWSupported: NvU32,
@@ -26323,7 +27574,7 @@ pub type NV_QUERY_MODIFIED_W_SUPPORT_PARAMS_V1 = _NV_QUERY_MODIFIED_W_SUPPORT_PA
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used to query the support of Lens Matched Shading HW feature\n! \\ingroup dx"]
 pub type NV_QUERY_MODIFIED_W_SUPPORT_PARAMS = NV_QUERY_MODIFIED_W_SUPPORT_PARAMS_V1;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_MODIFIED_W_COEFFICIENTS {
     pub fA: f32,
     pub fB: f32,
@@ -26399,7 +27650,7 @@ fn bindgen_test_layout__NV_MODIFIED_W_COEFFICIENTS() {
 }
 pub type NV_MODIFIED_W_COEFFICIENTS = _NV_MODIFIED_W_COEFFICIENTS;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_MODIFIED_W_PARAMS {
     pub version: NvU32,
     pub numEntries: NvU32,
@@ -26556,13 +27807,22 @@ fn bindgen_test_layout__NV_GET_SLEEP_STATUS_PARAMS() {
         )
     );
 }
+impl Default for _NV_GET_SLEEP_STATUS_PARAMS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used to get sleep status\n! \\ingroup dx"]
 pub type NV_GET_SLEEP_STATUS_PARAMS_V1 = _NV_GET_SLEEP_STATUS_PARAMS;
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used to get sleep status\n! \\ingroup dx"]
 pub type NV_GET_SLEEP_STATUS_PARAMS = NV_GET_SLEEP_STATUS_PARAMS_V1;
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used to set sleep mode\n! \\ingroup dx"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_SET_SLEEP_MODE_PARAMS {
     #[doc = "!< (IN) Structure version"]
     pub version: NvU32,
@@ -26659,7 +27919,7 @@ pub type NV_SET_SLEEP_MODE_PARAMS_V1 = _NV_SET_SLEEP_MODE_PARAMS;
 pub type NV_SET_SLEEP_MODE_PARAMS = NV_SET_SLEEP_MODE_PARAMS_V1;
 #[doc = "! SUPPORTED OS:  Windows 10 and higher\n!\n! Used to send Reflex Sync data to UMD\n! \\ingroup dx"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_SET_REFLEX_SYNC_PARAMS {
     #[doc = "!< (IN) Structure version"]
     pub version: NvU32,
@@ -27024,6 +28284,15 @@ fn bindgen_test_layout__NV_LATENCY_RESULT_PARAMS_FrameReport() {
         )
     );
 }
+impl Default for _NV_LATENCY_RESULT_PARAMS_FrameReport {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_LATENCY_RESULT_PARAMS() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_LATENCY_RESULT_PARAMS> =
@@ -27069,6 +28338,15 @@ fn bindgen_test_layout__NV_LATENCY_RESULT_PARAMS() {
             stringify!(rsvd)
         )
     );
+}
+impl Default for _NV_LATENCY_RESULT_PARAMS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used to get latency report.\n! \\ingroup dx"]
 pub type NV_LATENCY_RESULT_PARAMS_V1 = _NV_LATENCY_RESULT_PARAMS;
@@ -27155,6 +28433,15 @@ fn bindgen_test_layout__NV_LATENCY_MARKER_PARAMS() {
         )
     );
 }
+impl Default for _NV_LATENCY_MARKER_PARAMS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used set latency markers\n! \\ingroup dx"]
 pub type NV_LATENCY_MARKER_PARAMS_V1 = _NV_LATENCY_MARKER_PARAMS;
 #[doc = "! SUPPORTED OS:  Windows 7 and higher\n!\n! Used set latency markers\n! \\ingroup dx"]
@@ -27176,7 +28463,7 @@ pub type _NV_D3D12_WORKSTATION_FEATURE_TYPE = ::std::os::raw::c_int;
 #[doc = "! \\ingroup DX"]
 pub use self::_NV_D3D12_WORKSTATION_FEATURE_TYPE as NV_D3D12_WORKSTATION_FEATURE_TYPE;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NV_D3D12_WORKSTATION_FEATURE_RDMA_PROPERTIES {
     pub rdmaHeapSize: NvU64,
 }
@@ -27263,6 +28550,15 @@ fn bindgen_test_layout__NV_D3D12_WORKSTATION_FEATURE_PROPERTIES__bindgen_ty_1() 
         )
     );
 }
+impl Default for _NV_D3D12_WORKSTATION_FEATURE_PROPERTIES__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NV_D3D12_WORKSTATION_FEATURE_PROPERTIES() {
     const UNINIT: ::std::mem::MaybeUninit<_NV_D3D12_WORKSTATION_FEATURE_PROPERTIES> =
@@ -27314,6 +28610,15 @@ fn bindgen_test_layout__NV_D3D12_WORKSTATION_FEATURE_PROPERTIES() {
             stringify!(supported)
         )
     );
+}
+impl Default for _NV_D3D12_WORKSTATION_FEATURE_PROPERTIES {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NVAPI_D3D12_WORKSTATION_FEATURE_PROPERTIES_PARAMS_V1 =
     _NV_D3D12_WORKSTATION_FEATURE_PROPERTIES;
@@ -27726,7 +29031,7 @@ pub struct _NVVIOCAPS {
 }
 #[doc = "! Driver version"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NVVIOCAPS__bindgen_ty_1 {
     #[doc = "!< Major version. For GVI, majorVersion contains MajorVersion(HIWORD) And MinorVersion(LOWORD)"]
     pub majorVersion: NvU32,
@@ -27771,7 +29076,7 @@ fn bindgen_test_layout__NVVIOCAPS__bindgen_ty_1() {
 }
 #[doc = "! Firmware version"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NVVIOCAPS__bindgen_ty_2 {
     #[doc = "!< Major version. In version 2, for both GVI and GVO, majorVersion contains MajorVersion(HIWORD) And MinorVersion(LOWORD)"]
     pub majorVersion: NvU32,
@@ -27939,6 +29244,15 @@ fn bindgen_test_layout__NVVIOCAPS() {
         )
     );
 }
+impl Default for _NVVIOCAPS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Device capabilities"]
 pub type NVVIOCAPS = _NVVIOCAPS;
 #[doc = "! Input channel status"]
@@ -28033,6 +29347,15 @@ fn bindgen_test_layout__NVVIOCHANNELSTATUS() {
         )
     );
 }
+impl Default for _NVVIOCHANNELSTATUS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Input channel status"]
 pub type NVVIOCHANNELSTATUS = _NVVIOCHANNELSTATUS;
 #[doc = "! Input device status"]
@@ -28078,6 +29401,15 @@ fn bindgen_test_layout__NVVIOINPUTSTATUS() {
             stringify!(captureStatus)
         )
     );
+}
+impl Default for _NVVIOINPUTSTATUS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! Input device status"]
 pub type NVVIOINPUTSTATUS = _NVVIOINPUTSTATUS;
@@ -28271,6 +29603,15 @@ fn bindgen_test_layout__NVVIOOUTPUTSTATUS() {
         )
     );
 }
+impl Default for _NVVIOOUTPUTSTATUS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Output device status"]
 pub type NVVIOOUTPUTSTATUS = _NVVIOOUTPUTSTATUS;
 #[doc = "! Video device status."]
@@ -28327,6 +29668,15 @@ fn bindgen_test_layout__NVVIOSTATUS__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NVVIOSTATUS__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NVVIOSTATUS() {
     const UNINIT: ::std::mem::MaybeUninit<_NVVIOSTATUS> = ::std::mem::MaybeUninit::uninit();
@@ -28372,11 +29722,20 @@ fn bindgen_test_layout__NVVIOSTATUS() {
         )
     );
 }
+impl Default for _NVVIOSTATUS {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Video device status."]
 pub type NVVIOSTATUS = _NVVIOSTATUS;
 #[doc = "! Output region"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NVVIOOUTPUTREGION {
     #[doc = "!< Horizontal origin in pixels"]
     pub x: NvU32,
@@ -28500,6 +29859,15 @@ fn bindgen_test_layout__NVVIOGAMMARAMP8() {
         )
     );
 }
+impl Default for _NVVIOGAMMARAMP8 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Gamma ramp (8-bit index)"]
 pub type NVVIOGAMMARAMP8 = _NVVIOGAMMARAMP8;
 #[doc = "! Gamma ramp (10-bit index)"]
@@ -28558,11 +29926,20 @@ fn bindgen_test_layout__NVVIOGAMMARAMP10() {
         )
     );
 }
+impl Default for _NVVIOGAMMARAMP10 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Gamma ramp (10-bit index)"]
 pub type NVVIOGAMMARAMP10 = _NVVIOGAMMARAMP10;
 #[doc = "! Sync delay"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NVVIOSYNCDELAY {
     #[doc = "!< Structure version"]
     pub version: NvU32,
@@ -28710,6 +30087,15 @@ fn bindgen_test_layout__NVVIOVIDEOMODE() {
         )
     );
 }
+impl Default for _NVVIOVIDEOMODE {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Video mode information"]
 pub type NVVIOVIDEOMODE = _NVVIOVIDEOMODE;
 #[doc = "! Signal format details"]
@@ -28756,6 +30142,15 @@ fn bindgen_test_layout__NVVIOSIGNALFORMATDETAIL() {
             stringify!(videoMode)
         )
     );
+}
+impl Default for _NVVIOSIGNALFORMATDETAIL {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = "! Signal format details"]
 pub type NVVIOSIGNALFORMATDETAIL = _NVVIOSIGNALFORMATDETAIL;
@@ -28804,11 +30199,20 @@ fn bindgen_test_layout__NVVIODATAFORMATDETAIL() {
         )
     );
 }
+impl Default for _NVVIODATAFORMATDETAIL {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Data format details"]
 pub type NVVIODATAFORMATDETAIL = _NVVIODATAFORMATDETAIL;
 #[doc = "! Colorspace conversion"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NVVIOCOLORCONVERSION {
     #[doc = "!<  Structure version"]
     pub version: NvU32,
@@ -28953,6 +30357,15 @@ fn bindgen_test_layout__NVVIOGAMMACORRECTION__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NVVIOGAMMACORRECTION__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NVVIOGAMMACORRECTION() {
     const UNINIT: ::std::mem::MaybeUninit<_NVVIOGAMMACORRECTION> =
@@ -29029,10 +30442,19 @@ fn bindgen_test_layout__NVVIOGAMMACORRECTION() {
         )
     );
 }
+impl Default for _NVVIOGAMMACORRECTION {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Gamma correction"]
 pub type NVVIOGAMMACORRECTION = _NVVIOGAMMACORRECTION;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NVVIOCOMPOSITERANGE {
     pub uRange: NvU32,
     pub uEnabled: NvU32,
@@ -29403,6 +30825,15 @@ fn bindgen_test_layout__NVVIOOUTPUTCONFIG_V1() {
         )
     );
 }
+impl Default for _NVVIOOUTPUTCONFIG_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Output device configuration"]
 pub type NVVIOOUTPUTCONFIG_V1 = _NVVIOOUTPUTCONFIG_V1;
 #[repr(C)]
@@ -29723,6 +31154,15 @@ fn bindgen_test_layout__NVVIOOUTPUTCONFIG_V2() {
             stringify!(ancParityComputation)
         )
     );
+}
+impl Default for _NVVIOOUTPUTCONFIG_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NVVIOOUTPUTCONFIG_V2 = _NVVIOOUTPUTCONFIG_V2;
 #[repr(C)]
@@ -30056,6 +31496,15 @@ fn bindgen_test_layout__NVVIOOUTPUTCONFIG_V3() {
         )
     );
 }
+impl Default for _NVVIOOUTPUTCONFIG_V3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NVVIOOUTPUTCONFIG_V3 = _NVVIOOUTPUTCONFIG_V3;
 #[doc = "! Stream configuration"]
 #[repr(C)]
@@ -30072,7 +31521,7 @@ pub struct _NVVIOSTREAM {
     pub links: [_NVVIOSTREAM__bindgen_ty_1; 2usize],
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NVVIOSTREAM__bindgen_ty_1 {
     #[doc = "!< This stream's link[i] will use the specified (0-based) channel within the"]
     pub jack: NvU32,
@@ -30180,6 +31629,15 @@ fn bindgen_test_layout__NVVIOSTREAM() {
         )
     );
 }
+impl Default for _NVVIOSTREAM {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Stream configuration"]
 pub type NVVIOSTREAM = _NVVIOSTREAM;
 #[doc = "! Input device configuration"]
@@ -30262,6 +31720,15 @@ fn bindgen_test_layout__NVVIOINPUTCONFIG() {
         )
     );
 }
+impl Default for _NVVIOINPUTCONFIG {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Input device configuration"]
 pub type NVVIOINPUTCONFIG = _NVVIOINPUTCONFIG;
 #[repr(C)]
@@ -30319,6 +31786,15 @@ fn bindgen_test_layout__NVVIOCONFIG_V1__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NVVIOCONFIG_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NVVIOCONFIG_V1() {
     const UNINIT: ::std::mem::MaybeUninit<_NVVIOCONFIG_V1> = ::std::mem::MaybeUninit::uninit();
@@ -30373,6 +31849,15 @@ fn bindgen_test_layout__NVVIOCONFIG_V1() {
             stringify!(vioConfig)
         )
     );
+}
+impl Default for _NVVIOCONFIG_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NVVIOCONFIG_V1 = _NVVIOCONFIG_V1;
 #[repr(C)]
@@ -30430,6 +31915,15 @@ fn bindgen_test_layout__NVVIOCONFIG_V2__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NVVIOCONFIG_V2__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NVVIOCONFIG_V2() {
     const UNINIT: ::std::mem::MaybeUninit<_NVVIOCONFIG_V2> = ::std::mem::MaybeUninit::uninit();
@@ -30484,6 +31978,15 @@ fn bindgen_test_layout__NVVIOCONFIG_V2() {
             stringify!(vioConfig)
         )
     );
+}
+impl Default for _NVVIOCONFIG_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NVVIOCONFIG_V2 = _NVVIOCONFIG_V2;
 #[repr(C)]
@@ -30541,6 +32044,15 @@ fn bindgen_test_layout__NVVIOCONFIG_V3__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NVVIOCONFIG_V3__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NVVIOCONFIG_V3() {
     const UNINIT: ::std::mem::MaybeUninit<_NVVIOCONFIG_V3> = ::std::mem::MaybeUninit::uninit();
@@ -30595,6 +32107,15 @@ fn bindgen_test_layout__NVVIOCONFIG_V3() {
             stringify!(vioConfig)
         )
     );
+}
+impl Default for _NVVIOCONFIG_V3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NVVIOCONFIG_V3 = _NVVIOCONFIG_V3;
 pub type NVVIOOUTPUTCONFIG = NVVIOOUTPUTCONFIG_V3;
@@ -30666,6 +32187,15 @@ fn bindgen_test_layout_NVVIOTOPOLOGYTARGET() {
         )
     );
 }
+impl Default for NVVIOTOPOLOGYTARGET {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _NV_VIO_TOPOLOGY {
@@ -30719,6 +32249,15 @@ fn bindgen_test_layout__NV_VIO_TOPOLOGY() {
             stringify!(vioTarget)
         )
     );
+}
+impl Default for _NV_VIO_TOPOLOGY {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NV_VIO_TOPOLOGY = _NV_VIO_TOPOLOGY;
 pub type NVVIOTOPOLOGY = _NV_VIO_TOPOLOGY;
@@ -30943,6 +32482,15 @@ fn bindgen_test_layout__NVVIOPCIINFO() {
         )
     );
 }
+impl Default for _NVVIOPCIINFO {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NVVIOPCIINFO_V1 = _NVVIOPCIINFO;
 pub type NVVIOPCIINFO = NVVIOPCIINFO_V1;
 extern "C" {
@@ -31049,7 +32597,7 @@ extern "C" {
 }
 #[doc = "! \\addtogroup stereoapi\n! @{"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NVAPI_STEREO_CAPS {
     pub version: NvU32,
     pub _bitfield_align_1: [u32; 0],
@@ -31269,7 +32817,7 @@ pub type _NV_StereoSwapChainMode = ::std::os::raw::c_int;
 #[doc = "! \\ingroup stereoapi"]
 pub use self::_NV_StereoSwapChainMode as NV_STEREO_SWAPCHAIN_MODE;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvDRSSessionHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -31300,7 +32848,7 @@ fn bindgen_test_layout_NvDRSSessionHandle__() {
 }
 pub type NvDRSSessionHandle = *mut NvDRSSessionHandle__;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NvDRSProfileHandle__ {
     pub unused: ::std::os::raw::c_int,
 }
@@ -31344,7 +32892,7 @@ pub type _NVDRS_SETTING_LOCATION = ::std::os::raw::c_int;
 pub use self::_NVDRS_SETTING_LOCATION as NVDRS_SETTING_LOCATION;
 #[repr(C)]
 #[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct _NVDRS_GPU_SUPPORT {
     pub _bitfield_align_1: [u8; 0],
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize]>,
@@ -31927,6 +33475,15 @@ fn bindgen_test_layout__NVDRS_BINARY_SETTING() {
         )
     );
 }
+impl Default for _NVDRS_BINARY_SETTING {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = "! Enum to decide on the datatype of setting value."]
 pub type NVDRS_BINARY_SETTING = _NVDRS_BINARY_SETTING;
 #[repr(C)]
@@ -32000,6 +33557,15 @@ fn bindgen_test_layout__NVDRS_SETTING_VALUES__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NVDRS_SETTING_VALUES__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union _NVDRS_SETTING_VALUES__bindgen_ty_2 {
@@ -32059,6 +33625,15 @@ fn bindgen_test_layout__NVDRS_SETTING_VALUES__bindgen_ty_2() {
         )
     );
 }
+impl Default for _NVDRS_SETTING_VALUES__bindgen_ty_2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[test]
 fn bindgen_test_layout__NVDRS_SETTING_VALUES() {
     const UNINIT: ::std::mem::MaybeUninit<_NVDRS_SETTING_VALUES> =
@@ -32114,6 +33689,15 @@ fn bindgen_test_layout__NVDRS_SETTING_VALUES() {
             stringify!(settingValues)
         )
     );
+}
+impl Default for _NVDRS_SETTING_VALUES {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NVDRS_SETTING_VALUES = _NVDRS_SETTING_VALUES;
 #[repr(C)]
@@ -32192,6 +33776,15 @@ fn bindgen_test_layout__NVDRS_SETTING_V1__bindgen_ty_1() {
         )
     );
 }
+impl Default for _NVDRS_SETTING_V1__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union _NVDRS_SETTING_V1__bindgen_ty_2 {
@@ -32247,6 +33840,15 @@ fn bindgen_test_layout__NVDRS_SETTING_V1__bindgen_ty_2() {
             stringify!(wszCurrentValue)
         )
     );
+}
+impl Default for _NVDRS_SETTING_V1__bindgen_ty_2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[test]
 fn bindgen_test_layout__NVDRS_SETTING_V1() {
@@ -32333,6 +33935,15 @@ fn bindgen_test_layout__NVDRS_SETTING_V1() {
         )
     );
 }
+impl Default for _NVDRS_SETTING_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub type NVDRS_SETTING_V1 = _NVDRS_SETTING_V1;
 pub type NVDRS_SETTING = NVDRS_SETTING_V1;
 #[repr(C)]
@@ -32414,6 +34025,15 @@ fn bindgen_test_layout__NVDRS_APPLICATION_V1() {
             stringify!(launcher)
         )
     );
+}
+impl Default for _NVDRS_APPLICATION_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NVDRS_APPLICATION_V1 = _NVDRS_APPLICATION_V1;
 #[repr(C)]
@@ -32507,6 +34127,15 @@ fn bindgen_test_layout__NVDRS_APPLICATION_V2() {
             stringify!(fileInFolder)
         )
     );
+}
+impl Default for _NVDRS_APPLICATION_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NVDRS_APPLICATION_V2 = _NVDRS_APPLICATION_V2;
 #[repr(C)]
@@ -32602,6 +34231,15 @@ fn bindgen_test_layout__NVDRS_APPLICATION_V3() {
             stringify!(fileInFolder)
         )
     );
+}
+impl Default for _NVDRS_APPLICATION_V3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NVDRS_APPLICATION_V3 {
     #[inline]
@@ -32766,6 +34404,15 @@ fn bindgen_test_layout__NVDRS_APPLICATION_V4() {
         )
     );
 }
+impl Default for _NVDRS_APPLICATION_V4 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NVDRS_APPLICATION_V4 {
     #[inline]
     pub fn isMetro(&self) -> NvU32 {
@@ -32914,6 +34561,15 @@ fn bindgen_test_layout__NVDRS_PROFILE_V1() {
             stringify!(numOfSettings)
         )
     );
+}
+impl Default for _NVDRS_PROFILE_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 pub type NVDRS_PROFILE_V1 = _NVDRS_PROFILE_V1;
 pub type NVDRS_PROFILE = NVDRS_PROFILE_V1;
@@ -33327,6 +34983,15 @@ fn bindgen_test_layout_NV_CHIPSET_INFO_v4() {
         )
     );
 }
+impl Default for NV_CHIPSET_INFO_v4 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct NV_CHIPSET_INFO_v3 {
@@ -33454,6 +35119,15 @@ fn bindgen_test_layout_NV_CHIPSET_INFO_v3() {
         )
     );
 }
+impl Default for NV_CHIPSET_INFO_v3 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 pub const NV_CHIPSET_INFO_FLAGS_NV_CHIPSET_INFO_HYBRID: NV_CHIPSET_INFO_FLAGS = 1;
 pub type NV_CHIPSET_INFO_FLAGS = ::std::os::raw::c_int;
 #[repr(C)]
@@ -33547,6 +35221,15 @@ fn bindgen_test_layout_NV_CHIPSET_INFO_v2() {
         )
     );
 }
+impl Default for NV_CHIPSET_INFO_v2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct NV_CHIPSET_INFO_v1 {
@@ -33621,13 +35304,22 @@ fn bindgen_test_layout_NV_CHIPSET_INFO_v1() {
         )
     );
 }
+impl Default for NV_CHIPSET_INFO_v1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 extern "C" {
     #[doc = "!  This function returns information about the system's chipset.\n!\n! SUPPORTED OS:  Windows 7 and higher\n!\n!\n! \\since Release: 95\n!\n! \\retval  NVAPI_INVALID_ARGUMENT              pChipSetInfo is NULL.\n! \\retval  NVAPI_OK                           *pChipSetInfo is now set.\n! \\retval  NVAPI_INCOMPATIBLE_STRUCT_VERSION   NV_CHIPSET_INFO version not compatible with driver.\n! \\ingroup sysgeneral\n"]
     pub fn NvAPI_SYS_GetChipSetInfo(pChipSetInfo: *mut NV_CHIPSET_INFO_v4) -> NvAPI_Status;
 }
 #[doc = "! \\ingroup sysgeneral\n! Lid and dock information - used in NvAPI_GetLidDockInfo()"]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct NV_LID_DOCK_PARAMS {
     pub version: NvU32,
     #[doc = "! Structure version, constructed from the macro #NV_LID_DOCK_PARAMS_VER"]
@@ -33807,6 +35499,15 @@ fn bindgen_test_layout__NV_DISPLAY_DRIVER_INFO() {
             stringify!(szBuildBranch)
         )
     );
+}
+impl Default for _NV_DISPLAY_DRIVER_INFO {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 impl _NV_DISPLAY_DRIVER_INFO {
     #[inline]
@@ -33999,6 +35700,15 @@ fn bindgen_test_layout__NV_DISPLAY_DRIVER_INFO_V2() {
         )
     );
 }
+impl Default for _NV_DISPLAY_DRIVER_INFO_V2 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 impl _NV_DISPLAY_DRIVER_INFO_V2 {
     #[inline]
     pub fn bIsDCHDriver(&self) -> NvU32 {
@@ -34165,6 +35875,15 @@ fn bindgen_test_layout__NV_CLIENT_CALLBACK_SETTINGS_SUPER_V1() {
         )
     );
 }
+impl Default for _NV_CLIENT_CALLBACK_SETTINGS_SUPER_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Callback settings common to all client callbacks."]
 pub type NV_CLIENT_CALLBACK_SETTINGS_SUPER_V1 = _NV_CLIENT_CALLBACK_SETTINGS_SUPER_V1;
 #[doc = " Callback settings common to all client callbacks."]
@@ -34232,6 +35951,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_PERIODIC_CALLBACK_SETTINGS_SUPER_V1() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_PERIODIC_CALLBACK_SETTINGS_SUPER_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Callback settings common to all periodic client callbacks."]
 pub type NV_GPU_CLIENT_PERIODIC_CALLBACK_SETTINGS_SUPER_V1 =
     _NV_GPU_CLIENT_PERIODIC_CALLBACK_SETTINGS_SUPER_V1;
@@ -34285,6 +36013,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_CALLBACK_DATA_SUPER_V1() {
             stringify!(rsvd)
         )
     );
+}
+impl Default for _NV_GPU_CLIENT_CALLBACK_DATA_SUPER_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = " Callback data common to all client callbacks."]
 pub type NV_GPU_CLIENT_CALLBACK_DATA_SUPER_V1 = _NV_GPU_CLIENT_CALLBACK_DATA_SUPER_V1;
@@ -34360,6 +36097,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_UTILIZATION_DATA_V1() {
             stringify!(rsvd)
         )
     );
+}
+impl Default for _NV_GPU_CLIENT_UTILIZATION_DATA_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[doc = " Data specific to a single utilization domain."]
 pub type NV_GPU_CLIENT_UTILIZATION_DATA_V1 = _NV_GPU_CLIENT_UTILIZATION_DATA_V1;
@@ -34450,6 +36196,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1() {
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Data passed back to callback registered with\n @ref NvAPI_GPU_ClientRegisterForUtilizationSampleUpdates."]
 pub type NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1 = _NV_GPU_CLIENT_CALLBACK_UTILIZATION_DATA_V1;
 #[doc = " Function prototype for a periodic utilization data callback that will be registered with NvAPI."]
@@ -34535,6 +36290,15 @@ fn bindgen_test_layout__NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1(
         )
     );
 }
+impl Default for _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[doc = " Data required to register a periodic callback for utilization data."]
 pub type NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1 =
     _NV_GPU_CLIENT_UTILIZATION_PERIODIC_CALLBACK_SETTINGS_V1;
@@ -34549,12 +36313,12 @@ extern "C" {
     ) -> NvAPI_Status;
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct __crt_locale_data {
     pub _address: u8,
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct __crt_multibyte_data {
     pub _address: u8,
 }
